@@ -27,18 +27,35 @@ export const StartDate = styled.p`
 
 export const Contact = styled.div`
   position: absolute;
-  top: 50%;
-  left: 64px;
-  text-align: center;
-  transform: rotate(180deg) translateY(50%);
-  writing-mode: vertical-lr;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
 
   hr {
     transform: rotate(90deg);
-    display: inline-block;
+    display: none;
     width: 32px;
     margin: 40px -12px;
     border: 0.1px solid ${({ theme }) => theme.colors.brand};
+
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
+  }
+
+  span {
+    display: block;
+
+    @media (min-width: 768px) {
+      display: inline-block;
+    }
+  }
+
+  @media (min-width: 768px) {
+    top: 50%;
+    left: 64px;
+    transform: rotate(180deg) translateY(50%);
+    writing-mode: vertical-lr;
   }
 `
