@@ -9,5 +9,8 @@ declare module 'styled-components' {
       brand: string
       elements: string
     }
+    fonts: {
+      brand: string
+    }
   }
 }
