@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           crossOrigin='true'
         />
         <link
-          href='https://fonts.googleapis.com/css2?family=Oswald&display=swap'
+          href='https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap'
           rel='stylesheet'
         />
       </Head>

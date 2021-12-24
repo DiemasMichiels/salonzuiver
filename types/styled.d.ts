@@ -8,6 +8,7 @@ declare module 'styled-components' {
       black: string
       brand: string
       elements: string
+      backgroundColor: string
     }
     fonts: {
       brand: string

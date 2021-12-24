@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+
 export const GlobalStyle = createGlobalStyle`
   *, ::after, ::before {
     box-sizing: border-box;
@@ -6,9 +7,10 @@ export const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     font-size: 62.5%;
+    overflow: hidden;
   }
 
   body {
@@ -16,6 +18,9 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     color: ${({ theme }) => theme.colors.brand};
     font-family: ${({ theme }) => theme.fonts.brand};
+    background: url('/background.png');
+    background-size: cover;
+    background-position: center;
     overflow-x: hidden;
   }
 
@@ -29,15 +34,21 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-  h1 {
-    margin: 2.5rem 0;
-    font-size: 4rem;
-    font-weight: 600;
-    line-height: 4.5rem;
+  p, span {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+    font-weight: 300;
   }
 
-  p {
-    font-size: 1.7rem;
-    line-height: 3.4rem;
+  a {
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 3.6rem;
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.brand};
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `

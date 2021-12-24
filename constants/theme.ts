@@ -6,6 +6,7 @@ const THEME: DefaultTheme = {
     black: '#000000',
     brand: '#663600',
     elements: '#A35700',
+    backgroundColor: '#f5f0eb',
   },
   fonts: {
     brand: '"Oswald", sans-serif',
