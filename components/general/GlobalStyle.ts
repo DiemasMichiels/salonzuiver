@@ -17,8 +17,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
+    height: 100vh;
     padding: 0;
     margin: 0;
     color: ${({ theme }) => theme.colors.brand};
