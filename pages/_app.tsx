@@ -1,26 +1,18 @@
 import { ThemeProvider } from 'styled-components'
 import Head from 'next/head'
+import { DefaultSeo } from 'next-seo'
 import { THEME } from '../constants'
 import { GlobalStyle } from '../components/general/GlobalStyle'
+import SEO from '../next-seo.config'
 
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
+      <DefaultSeo {...SEO} />
       <Head>
-        <title>Schoonheidssalon Zuiver</title>
-        <link rel='icon' href='/favicon.ico' />
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link
-          rel='preconnect'
-          href='https://fonts.gstatic.com'
-          crossOrigin='true'
-        />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap'
-          rel='stylesheet'
-        />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
       <ThemeProvider theme={THEME}>
         <GlobalStyle />

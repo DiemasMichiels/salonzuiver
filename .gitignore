@@ -37,7 +37,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 
-# serviceworker
-sw.*
-workbox-*
-fallback-*
+# PWA files
+**/sw.js
+**/workbox-*.js
+**/worker-*.js
+**/sw.js.map
+**/workbox-*.js.map
+**/worker-*.js.map
+**/fallback-development.js
