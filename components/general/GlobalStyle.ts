@@ -5,19 +5,15 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html {
-    height: -webkit-fill-available;
-  }
-
   html,
   body {
     width: 100vw;
+    height: 100vh;
     font-size: 62.5%;
     overflow: hidden;
   }
 
   body {
-    height: 100vh;
     padding: 0;
     margin: 0;
     color: ${({ theme }) => theme.colors.brand};
