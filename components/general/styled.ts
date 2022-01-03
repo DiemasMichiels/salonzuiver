@@ -16,7 +16,7 @@ export const Logo = styled.div`
   transform: translate(-50%, -50%);
 `
 
-export const StartDate = styled.p`
+export const StartDate = styled.time`
   position: absolute;
   bottom: 64px;
   left: 50%;

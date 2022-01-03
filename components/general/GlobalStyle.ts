@@ -34,7 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
   }
 
-  p, span {
+  p, span, time {
     font-size: 2.4rem;
     line-height: 3.6rem;
     font-weight: 300;

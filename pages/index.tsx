@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         <Logo />
         <VisuallyHidden>Schoonheidssalon Zuiver</VisuallyHidden>
       </styled.Logo>
-      <styled.StartDate>22 . 02 . 2022</styled.StartDate>
+      <styled.StartDate dateTime='2022-02-22'>22 . 02 . 2022</styled.StartDate>
       <styled.Contact>
         <span>Neem contact op</span>
         <hr />
