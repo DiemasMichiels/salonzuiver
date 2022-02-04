@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import * as styled from '../components/general/styled'
 import Logo from '../assets/logo.svg'
 import VisuallyHidden from '../components/general/VisuallyHidden/VisuallyHidden'
+import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
@@ -14,7 +15,7 @@ const Home: NextPage = () => {
       <styled.Contact>
         <span>Neem contact op</span>
         <hr />
-        <a href='mailto:info@salonzuiver.be'>info@salonzuiver.be</a>
+        <Link href='/contact'>info@salonzuiver.be</Link>
       </styled.Contact>
     </styled.Container>
   )

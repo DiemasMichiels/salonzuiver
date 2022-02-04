@@ -30,6 +30,10 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.brand};
   }
 
+  h1 {
+    font-size: 20rem;
+  }
+
   h1, h2, h3, h4, h5, h6, p, span, a {
     margin: 0;
   }
