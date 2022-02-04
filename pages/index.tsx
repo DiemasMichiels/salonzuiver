@@ -7,6 +7,16 @@ import Link from 'next/link'
 const Home: NextPage = () => {
   return (
     <styled.Container>
+      <styled.Nav>
+        <ul>
+          <li>
+            <Link href='/prices'>Prijslijst</Link>
+          </li>
+          <li>
+            <Link href='/contact'>Contact</Link>
+          </li>
+        </ul>
+      </styled.Nav>
       <styled.Logo>
         <Logo />
         <VisuallyHidden>Schoonheidssalon Zuiver</VisuallyHidden>

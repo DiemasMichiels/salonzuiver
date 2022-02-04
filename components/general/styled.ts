@@ -59,3 +59,18 @@ export const Contact = styled.div`
     writing-mode: vertical-lr;
   }
 `
+
+export const Nav = styled.nav`
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  writing-mode: vertical-rl;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 40px;
+  }
+`

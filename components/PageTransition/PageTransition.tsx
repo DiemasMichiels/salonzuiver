@@ -8,17 +8,14 @@ type Props = {
 const PageTransition = ({ children }: Props) => {
   const [displayChildren, setDisplayChildren] = useState(children)
   const [transitionStage, setTransitionStage] = useState('out')
-  console.log('◇─◇──◇────◇────◇─乁(ツ)ㄏ─◇────◇─────◇──◇─◇')
-  console.log('transitionStage')
-  console.log(transitionStage)
-  console.log('◇─◇──◇────◇────◇─乁(ツ)ㄏ─◇────◇─────◇──◇─◇')
+
   useEffect(() => {
     setTransitionStage('show')
   }, [])
 
   useEffect(() => {
     if (children !== displayChildren) setTransitionStage('out')
-  }, [children, setDisplayChildren, displayChildren])
+  }, [children, displayChildren])
 
   return (
     <>
@@ -39,10 +36,7 @@ const PageTransition = ({ children }: Props) => {
           }
         }}
       />
-      <styled.FadeTransition
-        key={Math.random()}
-        show={transitionStage === 'show' || transitionStage === 'out'}
-      >
+      <styled.FadeTransition show={transitionStage === 'show'}>
         {displayChildren}
       </styled.FadeTransition>
     </>

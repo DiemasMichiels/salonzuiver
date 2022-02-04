@@ -8,7 +8,7 @@ const Contact: NextPage = () => {
       <Head>
         <title>Schoonheidssalon Zuiver - Contact</title>
       </Head>
-      <Link href='/prices'>
+      <Link href='/'>
         <h1>Contact</h1>
       </Link>
     </>
