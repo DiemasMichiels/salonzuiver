@@ -24,19 +24,11 @@ const PageTransition = ({ children }: Props) => {
         onTransitionEnd={() => {
           if (transitionStage === 'out') {
             setTransitionStage('in')
-          }
-        }}
-      />
-      <styled.LeftAnimationPane
-        show={transitionStage === 'in' || transitionStage === 'show'}
-        onTransitionEnd={() => {
-          if (transitionStage === 'in') {
-            setTransitionStage('show')
             setDisplayChildren(children)
           }
         }}
       />
-      <styled.FadeTransition show={transitionStage === 'show'}>
+      <styled.FadeTransition show={transitionStage === 'in'}>
         {displayChildren}
       </styled.FadeTransition>
     </>
