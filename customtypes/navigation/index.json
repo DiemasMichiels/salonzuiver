@@ -1,0 +1,63 @@
+{
+  "id": "navigation",
+  "label": "Navigation",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "menuItems": {
+        "config": {
+          "label": "Menu items",
+          "placeholder": "",
+          "fields": {
+            "Title": {
+              "config": {
+                "label": "Title",
+                "placeholder": ""
+              },
+              "type": "Text"
+            },
+            "link": {
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "allowTargetBlank": false
+              },
+              "type": "Link"
+            }
+          }
+        },
+        "type": "Group"
+      },
+      "socialItems": {
+        "config": {
+          "label": "Social items",
+          "placeholder": "",
+          "fields": {
+            "social": {
+              "config": {
+                "label": "Social",
+                "placeholder": "",
+                "options": [
+                  "instagram",
+                  "facebook"
+                ],
+                "default_value": "instagram"
+              },
+              "type": "Select"
+            },
+            "link": {
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "allowTargetBlank": false
+              },
+              "type": "Link"
+            }
+          }
+        },
+        "type": "Group"
+      }
+    }
+  }
+}

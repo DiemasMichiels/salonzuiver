@@ -1,25 +1,52 @@
 {
   "_cts": {
-    "dynamic-page": {}
+    "dynamic-page": {},
+    "navigation": {
+      "menuItems": {},
+      "socialItems": {}
+    }
   },
   "slices": {
-    "Hero": {
-      "default-slice": {
+    "Hero": [
+      {
+        "variation": "default-slice",
+        "name": "Default slice",
+        "slice_type": "hero",
+        "items": [],
         "primary": {
-          "description": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
+          "title": [
+            {
+              "type": "heading1",
+              "text": "Facilitate B2C technologies",
+              "spans": []
             }
+          ],
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Irure cillum labore ea ea.",
+              "spans": []
+            }
+          ],
+          "image": {
+            "dimensions": {
+              "width": 900,
+              "height": 500
+            },
+            "alt": "Placeholder image",
+            "copyright": null,
+            "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
           },
-          "cta": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
+          "cta": [
+            {
+              "type": "paragraph",
+              "text": "Aliquip aliqua dolor cupidatat incididunt commodo qui enim in nulla enim tempor nisi. Proident nisi incididunt ex in magna magna ut ut commodo eu cillum consectetur tempor esse elit.",
+              "spans": []
             }
-          }
+          ]
         }
       }
-    }
+    ],
+    "Behandelingen": {}
   }
 }

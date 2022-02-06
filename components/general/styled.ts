@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const Container = styled.main`
   width: 100vw;
   height: 100vh;
-  background-color: ${({ theme }) => theme.colors.backgroundColor};
   mix-blend-mode: hard-light;
 `
 
@@ -37,7 +36,7 @@ export const Contact = styled.div`
     display: none;
     width: 32px;
     margin: 40px -12px;
-    border: 0.1px solid ${({ theme }) => theme.colors.brand};
+    border: 0.1px solid ${({ theme }) => theme.colors.green36};
 
     @media (min-width: 768px) {
       display: inline-block;

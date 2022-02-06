@@ -1,17 +1,11 @@
 // styled.d.ts
 import 'styled-components'
+import { THEME } from '@constants'
 
 declare module 'styled-components' {
-  export interface DefaultTheme {
-    colors: {
-      white: string
-      black: string
-      brand: string
-      elements: string
-      backgroundColor: string
-    }
-    fonts: {
-      brand: string
-    }
-  }
+  type Theme = typeof THEME
+
+  // This needs to be an interface to properly override the default theme
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  export interface DefaultTheme extends Theme {}
 }

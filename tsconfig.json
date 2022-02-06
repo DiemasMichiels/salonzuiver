@@ -16,7 +16,6 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "@root/*": ["*"],
       "@assets": ["assets"],
       "@assets/*": ["assets/*"],
       "@components": ["components"],
@@ -32,7 +31,8 @@
       "@utils": ["utils"],
       "@utils/*": ["utils/*"],
       "@slicemachine": [".slicemachine"],
-      "@slicemachine/*": [".slicemachine/*"]
+      "@slicemachine/*": [".slicemachine/*"],
+      "@root/*": ["*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

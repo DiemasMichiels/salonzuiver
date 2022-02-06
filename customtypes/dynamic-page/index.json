@@ -12,19 +12,50 @@
         },
         "type": "UID"
       },
-      "ogTitle": {
+      "pageTitle": {
         "config": {
-          "label": "OG: Title",
+          "label": "Page Title",
           "placeholder": ""
         },
         "type": "Text"
       },
-      "ogDescription": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
         "config": {
-          "label": "OG: description",
+          "choices": {
+            "hero": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    },
+    "SEO": {
+      "seoTitle": {
+        "config": {
+          "label": "SEO Title",
           "placeholder": ""
         },
         "type": "Text"
+      },
+      "seoDescription": {
+        "config": {
+          "label": "SEO Description",
+          "placeholder": ""
+        },
+        "type": "Text"
+      },
+      "seoImage": {
+        "config": {
+          "label": "SEO Image",
+          "constraint": {
+            "width": 1200,
+            "height": 630
+          },
+          "thumbnails": []
+        },
+        "type": "Image"
       }
     }
   }
