@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import * as styled from '../components/general/styled'
-import Logo from '../assets/logo.svg'
-import VisuallyHidden from '../components/general/VisuallyHidden/VisuallyHidden'
+import * as styled from '@components/general/styled'
+import Logo from '@assets/logo.svg'
+import VisuallyHidden from '@components/general/VisuallyHidden/VisuallyHidden'
 
 const Home: NextPage = () => {
   return (

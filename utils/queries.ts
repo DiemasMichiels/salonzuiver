@@ -1,5 +1,5 @@
-import { Route } from '../prismicConfiguration'
-import Client from './prismicHelpers'
+import Client from './prismic/client'
+import { Route } from './prismic/routes'
 
 // What for ugly code is this, this probably needs changing
 

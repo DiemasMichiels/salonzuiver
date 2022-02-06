@@ -1,3 +1,1 @@
-import THEME from './theme'
-
-export { THEME }
+export { default as THEME } from './theme'

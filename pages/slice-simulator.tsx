@@ -1,7 +1,7 @@
 import { SliceSimulator } from '@prismicio/slice-simulator-react'
 import SliceZone from 'next-slicezone'
-import state from '../.slicemachine/libraries-state.json'
-import * as Slices from '../slices'
+import state from '@slicemachine/libraries-state.json'
+import * as Slices from '@slices'
 
 import type LibrariesState from '@slicemachine/core/build/src/models/LibrariesState'
 

@@ -1,9 +1,9 @@
 import { ThemeProvider } from 'styled-components'
 import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
-import { THEME } from '../constants'
-import { GlobalStyle } from '../components/general/GlobalStyle'
-import SEO from '../next-seo.config'
+import { THEME } from '@constants'
+import { GlobalStyle } from '@components/general/GlobalStyle'
+import SEO from '@root/next-seo.config'
 
 import type { AppProps } from 'next/app'
 

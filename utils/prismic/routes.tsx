@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
-import type { PrismicDocument } from '@prismicio/types'
+import type { FilledLinkToDocumentField } from '@prismicio/types'
 
 export const PRISMIC_TYPES = {
   DYNAMIC_PAGE: 'dynamic-page',
 }
 
 export const customLink = (
-  element: { data: PrismicDocument },
+  element: { data: FilledLinkToDocumentField },
   content: string,
   index: number | string,
 ) => (
@@ -16,7 +16,13 @@ export const customLink = (
   </Link>
 )
 
-export const linkResolver = (doc: PrismicDocument) => {
+export const linkResolver = (doc: FilledLinkToDocumentField) => {
+  if (doc.isBroken) {
+    return '/404'
+  }
+  if (doc.type === PRISMIC_TYPES.DYNAMIC_PAGE && doc.uid === 'home') {
+    return '/'
+  }
   if (doc.type === PRISMIC_TYPES.DYNAMIC_PAGE) {
     return `/${doc.uid}`
   }
