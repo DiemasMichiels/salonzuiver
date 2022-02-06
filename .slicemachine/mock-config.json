@@ -1,0 +1,25 @@
+{
+  "_cts": {
+    "dynamic-page": {}
+  },
+  "slices": {
+    "Hero": {
+      "default-slice": {
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "cta": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}
