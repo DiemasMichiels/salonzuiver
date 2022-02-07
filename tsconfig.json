@@ -32,6 +32,8 @@
       "@utils/*": ["utils/*"],
       "@slicemachine": [".slicemachine"],
       "@slicemachine/*": [".slicemachine/*"],
+      "@customtypes": ["customtypes"],
+      "@customtypes/*": ["customtypes/*"],
       "@root/*": ["*"]
     }
   },

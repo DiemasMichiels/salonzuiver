@@ -10,7 +10,7 @@
           "label": "Menu items",
           "placeholder": "",
           "fields": {
-            "Title": {
+            "title": {
               "config": {
                 "label": "Title",
                 "placeholder": ""

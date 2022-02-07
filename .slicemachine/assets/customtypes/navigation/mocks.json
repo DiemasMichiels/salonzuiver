@@ -1,72 +1,65 @@
 {
-  "id": "c1a00582-4bde-49d4-8439-8ab3081652ec",
-  "uid": "quaerat-qui-fugiat",
+  "id": "c5966e46-8af3-43bf-8b29-2d9cf46c8b0f",
+  "uid": "asperiores-est-nam",
   "type": "navigation",
   "data": {
     "menuItems": [
       {
-        "Title": "orchestrate clicks-and-mortar architectures",
+        "title": "utilize one-to-one experiences",
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "title": "repurpose revolutionary schemas",
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      }
+    ],
+    "socialItems": [
+      {
+        "social": "instagram",
         "link": {
           "link_type": "Web",
           "url": "http://google.com"
         }
       },
       {
-        "Title": "facilitate interactive supply-chains",
+        "social": "instagram",
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "social": "instagram",
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "social": "instagram",
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "social": "instagram",
         "link": {
           "link_type": "Web",
           "url": "http://twitter.com"
         }
       },
       {
-        "Title": "iterate robust users",
+        "social": "instagram",
         "link": {
           "link_type": "Web",
           "url": "http://google.com"
-        }
-      },
-      {
-        "Title": "engineer visionary supply-chains",
-        "link": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
-        }
-      }
-    ],
-    "socialItems": [
-      {
-        "social": "facebook",
-        "link": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        }
-      },
-      {
-        "social": "instagram",
-        "link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      {
-        "social": "instagram",
-        "link": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
-        }
-      },
-      {
-        "social": "instagram",
-        "link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      {
-        "social": "facebook",
-        "link": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
         }
       }
     ]

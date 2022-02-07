@@ -1,30 +1,31 @@
-import { PRISMIC_TYPES } from '@utils/prismic/routes'
+import { PRISMIC_TYPES } from '@utils/prismic/constants'
 import { Client } from '@utils/prismic/client'
 import Prismic from '@prismicio/client'
-import * as styled from '@components/general/styled'
 
+import type { DynamicPageData } from '@customtypes/dynamic-page/types'
 import type { Document } from '@prismicio/client/types/documents'
 import type { GetStaticProps, NextPage } from 'next'
 
 type Props = {
-  doc: Document<any>
-  navigation: Document<any>
+  doc: Document<DynamicPageData>
 }
 
 const DynamicPage: NextPage<Props> = ({ doc }) => {
-  return <styled.Container>{doc.data.pageTitle}</styled.Container>
+  return <div>{doc.data.pageTitle}</div>
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const uid = typeof params?.uid === 'string' ? params.uid : ''
 
-  const doc = await Client().getByUID(PRISMIC_TYPES.DYNAMIC_PAGE, uid, {})
-  const navigation = await Client().getSingle('navigation', {})
+  const doc = await Client().getByUID<DynamicPageData>(
+    PRISMIC_TYPES.DYNAMIC_PAGE,
+    uid,
+    {},
+  )
 
   return {
     props: {
       doc,
-      navigation,
     },
     revalidate: 60,
   }

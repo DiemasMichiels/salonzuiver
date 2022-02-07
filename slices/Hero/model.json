@@ -39,11 +39,9 @@
         "cta": {
           "config": {
             "label": "Cta",
-            "placeholder": "",
-            "allowTargetBlank": false,
-            "single": "paragraph"
+            "placeholder": ""
           },
-          "type": "StructuredText"
+          "type": "Text"
         }
       },
       "items": {}
