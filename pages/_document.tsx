@@ -47,7 +47,7 @@ export default class MyDocument extends Document {
           <link rel='icon' href='/icon.svg' type='image/svg+xml' />
           <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
           <link rel='manifest' href='/manifest.json' />
-          <meta name='theme-color' content='#FAF5F0' />
+          <meta name='theme-color' content='#F8F7F2' />
           <link rel='preconnect' href='https://fonts.googleapis.com' />
           <link
             rel='preconnect'

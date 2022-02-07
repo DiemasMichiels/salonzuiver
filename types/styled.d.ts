@@ -1,6 +1,6 @@
 // styled.d.ts
 import 'styled-components'
-import { THEME } from '@constants'
+import THEME from '@theme/theme'
 
 declare module 'styled-components' {
   type Theme = typeof THEME

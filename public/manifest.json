@@ -3,15 +3,15 @@
   "short_name": "Salon Zuiver",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/ico-192x192.png",
       "type": "image/png",
       "sizes": "192x192",
       "purpose": "any maskable"
     },
-    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+    { "src": "/ico-512x512.png", "type": "image/png", "sizes": "512x512" }
   ],
-  "theme_color": "#FAF5F0",
-  "background_color": "#FAF5F0",
+  "theme_color": "#F8F7F2",
+  "background_color": "#F8F7F2",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait"

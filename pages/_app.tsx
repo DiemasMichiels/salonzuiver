@@ -5,7 +5,7 @@ import SEO from '@root/next-seo.config'
 import Client from '@utils/prismic/client'
 import NextApp from 'next/app'
 import Navigation from '@components/navigation/Navigation'
-import THEME from '@root/theme/theme'
+import THEME from '@theme/theme'
 
 import type { NavigationData } from '@customtypes/navigation/types'
 import type { AppContext, AppInitialProps, AppProps } from 'next/app'
