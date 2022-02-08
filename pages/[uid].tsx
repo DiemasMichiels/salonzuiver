@@ -33,12 +33,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export async function getStaticPaths() {
   const docs = await Client().query(
     Prismic.Predicates.at('document.type', PRISMIC_TYPES.DYNAMIC_PAGE),
-    { lang: '*' },
   )
 
   return {
     paths: docs.results.map((doc) => `/${doc.uid}`),
-    fallback: true,
+    fallback: false,
   }
 }
 
