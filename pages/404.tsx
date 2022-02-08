@@ -1,5 +1,4 @@
 import Error from 'next/error'
-
 import type { NextPage } from 'next'
 
 const NotFound: NextPage = () => {

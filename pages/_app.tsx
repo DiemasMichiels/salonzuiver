@@ -1,21 +1,24 @@
 import { ThemeProvider } from 'styled-components'
 import { DefaultSeo, NextSeo } from 'next-seo'
-import { GlobalStyle } from '@components/general/GlobalStyle'
+import NextApp from 'next/app'
+import Head from 'next/head'
 import SEO from '@root/next-seo.config'
 import Client from '@utils/prismic/client'
-import NextApp from 'next/app'
-import Navigation from '@components/navigation/Navigation'
 import THEME from '@theme/theme'
 import * as styled from '@components/general/styled'
-
-import type { NavigationData } from '@customtypes/navigation/types'
+import Navigation from '@components/navigation/Navigation'
+import { GlobalStyle } from '@components/general/GlobalStyle'
 import type { AppContext, AppInitialProps, AppProps } from 'next/app'
+import type { NavigationData } from '@customtypes/navigation/types'
 
 const App = ({ Component, pageProps, router }: AppProps) => {
-  const { seoTitle, seoDescription, seoImage } = pageProps.doc?.data
+  const { seoTitle, seoDescription, seoImage } = pageProps.doc?.data ?? {}
 
   return (
     <>
+      <Head>
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+      </Head>
       <DefaultSeo {...SEO} />
       <NextSeo
         title={seoTitle}

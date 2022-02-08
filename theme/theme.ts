@@ -15,7 +15,8 @@ const THEME = {
     title: '"Playfair Display", sans-serif',
   },
   sizes: {
-    menuWidth: '76px',
+    topBarHeight: '120px',
+    sideBarWidth: '76px',
   },
 }
 

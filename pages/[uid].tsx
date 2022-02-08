@@ -1,7 +1,6 @@
+import Prismic from '@prismicio/client'
 import { PRISMIC_TYPES } from '@utils/prismic/constants'
 import { Client } from '@utils/prismic/client'
-import Prismic from '@prismicio/client'
-
 import type { DynamicPageData } from '@customtypes/dynamic-page/types'
 import type { Document } from '@prismicio/client/types/documents'
 import type { GetStaticProps, NextPage } from 'next'

@@ -1,9 +1,8 @@
 import Image from 'next/image'
-import * as styled from './styled'
 import Link from '@components/general/Link/Link'
 import FacebookIcon from '@assets/icons/facebook.svg'
 import InstagramIcon from '@assets/icons/instagram.svg'
-
+import * as styled from './styled'
 import type { NavigationData } from '@customtypes/navigation/types'
 import type { Document } from '@prismicio/client/types/documents'
 
@@ -25,6 +24,7 @@ const Navigation = ({ navigation, isHome = false }: Props) => {
               alt={logo.alt ?? undefined}
               width={logo.dimensions.width}
               height={logo.dimensions.height}
+              priority
             />
           )}
         </Link>

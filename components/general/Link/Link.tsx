@@ -1,6 +1,5 @@
 import { default as NextLink } from 'next/link'
 import { linkResolver } from '@utils/prismic/routes'
-
 import type {
   FilledLinkToDocumentField,
   FilledLinkToWebField,
@@ -12,9 +11,10 @@ type Props = {
   href: LinkField | string
   children: ReactNode
   target?: '_blank' | string
+  className?: string
 }
 
-const Link = ({ href, children, target }: Props) => {
+const Link = ({ href, children, target, className }: Props) => {
   let actualHref = '#'
   let actualTarget = target
 
@@ -30,6 +30,7 @@ const Link = ({ href, children, target }: Props) => {
   return (
     <NextLink href={actualHref}>
       <a
+        className={className}
         target={actualTarget}
         rel={actualTarget === '_blank' ? 'noreferrer noopener' : undefined}
       >

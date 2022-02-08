@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { LinkHoverStyleLR } from './styled'
 
 export const GlobalStyle = createGlobalStyle`
   *, ::after, ::before {
@@ -40,14 +41,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    font-size: 2.4rem;
-    font-weight: 400;
-    line-height: 3.6rem;
-    text-decoration: none;
+    padding: 0.4rem 0;
     color: ${({ theme }) => theme.colors.green20};
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
 
-    &:hover {
-      text-decoration: underline;
-    }
+    ${LinkHoverStyleLR}
   }
 `

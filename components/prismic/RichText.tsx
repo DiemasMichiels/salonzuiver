@@ -1,7 +1,6 @@
 // import { CustomLink } from '@utils/prismic/routes'
 import { RichText as PrismicRichText } from 'prismic-reactjs'
 import Link from '@components/general/Link/Link'
-
 import type { RichTextBlock } from 'prismic-reactjs'
 import type { FilledLinkToDocumentField, RichTextField } from '@prismicio/types'
 import type { Elements, HTMLSerializer } from 'prismic-reactjs'

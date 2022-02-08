@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { fadeIn } from './keyframes'
 
 export const Background = styled.div`
@@ -22,5 +22,36 @@ export const Background = styled.div`
     left: 0;
     background-color: ${({ theme }) => theme.colors.brown92};
     mix-blend-mode: hard-light;
+  }
+`
+
+export const LinkHoverStyleLR = css`
+  background: linear-gradient(
+      to left,
+      transparent 50%,
+      ${({ theme }) => theme.colors.green48p32} 50%
+    )
+    right;
+  background-size: 200%;
+  transition: 0.25s ease-in-out;
+
+  &:hover {
+    background-position: left;
+  }
+`
+
+export const LinkHoverStyleTB = css`
+  background: linear-gradient(
+      to top,
+      transparent 50%,
+      ${({ theme }) => theme.colors.green48p32} 50%
+    )
+    bottom;
+  background-size: 100% 200%;
+  transition: 0.25s ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+    background-position: top;
   }
 `
