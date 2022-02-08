@@ -27,7 +27,10 @@ const App = ({
   pageProps: PageProps
 }) => {
   const { seoTitle, seoDescription, seoImage } = pageProps.doc?.data ?? {}
-
+  console.log('◇─◇──◇────◇────◇─乁(ツ)ㄏ─◇────◇─────◇──◇─◇')
+  console.log('router')
+  console.log(router)
+  console.log('◇─◇──◇────◇────◇─乁(ツ)ㄏ─◇────◇─────◇──◇─◇')
   return (
     <>
       <Head>
@@ -62,7 +65,7 @@ const App = ({
         <styled.Background />
         {pageProps.navigation && (
           <Navigation
-            isHome={router.asPath === '/'}
+            isHome={router.pathname === '/'}
             navigation={pageProps.navigation}
           />
         )}
