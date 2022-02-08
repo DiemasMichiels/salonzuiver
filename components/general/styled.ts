@@ -1,60 +1,26 @@
 import styled from 'styled-components'
+import { fadeIn } from './keyframes'
 
-// export const Container = styled.main`
-//   width: 100vw;
-//   height: 100vh;
-//   mix-blend-mode: hard-light;
-// `
+export const Background = styled.div`
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('/background.png');
+  background-size: cover;
+  background-position: center;
+  animation: ${fadeIn} 1s;
 
-// export const Logo = styled.div`
-//   position: absolute;
-//   width: 568px;
-//   max-width: 80%;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-// `
-
-// export const StartDate = styled.time`
-//   position: absolute;
-//   bottom: 64px;
-//   left: 50%;
-//   text-align: center;
-//   letter-spacing: 0.04em;
-//   transform: translateX(-50%);
-// `
-
-// export const Contact = styled.div`
-//   position: absolute;
-//   top: 64px;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   text-align: center;
-
-//   hr {
-//     transform: rotate(90deg);
-//     display: none;
-//     width: 32px;
-//     margin: 40px -12px;
-//     border: 0.1px solid ${({ theme }) => theme.colors.green36};
-
-//     @media (min-width: 768px) {
-//       display: inline-block;
-//     }
-//   }
-
-//   span {
-//     display: block;
-
-//     @media (min-width: 768px) {
-//       display: inline-block;
-//     }
-//   }
-
-//   @media (min-width: 768px) {
-//     top: 50%;
-//     left: 64px;
-//     transform: rotate(180deg) translateY(50%);
-//     writing-mode: vertical-lr;
-//   }
-// `
+  &::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: ${({ theme }) => theme.colors.brown92};
+    mix-blend-mode: hard-light;
+  }
+`

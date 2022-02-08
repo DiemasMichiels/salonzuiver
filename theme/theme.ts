@@ -14,6 +14,9 @@ const THEME = {
     brand: '"Oswald", sans-serif',
     title: '"Playfair Display", sans-serif',
   },
+  sizes: {
+    menuWidth: '76px',
+  },
 }
 
 export default THEME

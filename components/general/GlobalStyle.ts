@@ -29,10 +29,6 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.green36};
   }
 
-  h1, h2, h3, h4, h5, h6, p, span, a {
-    margin: 0;
-  }
-
   h1, h2, h3, h4, h5, h6 {
     font-family: ${({ theme }) => theme.fonts.title};
   }

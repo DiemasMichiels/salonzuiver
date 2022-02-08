@@ -8,6 +8,7 @@ import type {
   RichTextField,
   Slice,
 } from '@prismicio/types'
+
 export type HeroSlice = Slice<
   PRISMIC_SLICES.HERO,
   {

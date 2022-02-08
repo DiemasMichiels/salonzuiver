@@ -5,6 +5,16 @@
   "status": true,
   "json": {
     "Main": {
+      "logo": {
+        "config": {
+          "label": "Logo",
+          "constraint": {
+            "height": 40
+          },
+          "thumbnails": []
+        },
+        "type": "Image"
+      },
       "menuItems": {
         "config": {
           "label": "Menu items",

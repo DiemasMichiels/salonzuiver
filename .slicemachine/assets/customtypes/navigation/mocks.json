@@ -1,21 +1,37 @@
 {
-  "id": "c5966e46-8af3-43bf-8b29-2d9cf46c8b0f",
-  "uid": "asperiores-est-nam",
+  "id": "906bb672-1dfc-4955-b516-029fa83586df",
+  "uid": "veritatis-aut-quis",
   "type": "navigation",
   "data": {
+    "logo": {
+      "dimensions": {
+        "width": 900,
+        "height": 40
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=40&fit=crop"
+    },
     "menuItems": [
       {
-        "title": "utilize one-to-one experiences",
+        "title": "unleash back-end initiatives",
         "link": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "http://twitter.com"
         }
       },
       {
-        "title": "repurpose revolutionary schemas",
+        "title": "exploit global methodologies",
         "link": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "title": "transform B2C models",
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
         }
       }
     ],
@@ -24,7 +40,7 @@
         "social": "instagram",
         "link": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "https://prismic.io"
         }
       },
       {
@@ -52,14 +68,7 @@
         "social": "instagram",
         "link": {
           "link_type": "Web",
-          "url": "http://twitter.com"
-        }
-      },
-      {
-        "social": "instagram",
-        "link": {
-          "link_type": "Web",
-          "url": "http://google.com"
+          "url": "https://slicemachine.dev"
         }
       }
     ]

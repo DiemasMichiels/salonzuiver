@@ -6,12 +6,13 @@ import Client from '@utils/prismic/client'
 import NextApp from 'next/app'
 import Navigation from '@components/navigation/Navigation'
 import THEME from '@theme/theme'
+import * as styled from '@components/general/styled'
 
 import type { NavigationData } from '@customtypes/navigation/types'
 import type { AppContext, AppInitialProps, AppProps } from 'next/app'
 
-const App = ({ Component, pageProps }: AppProps) => {
-  const { seoTitle, seoDescription, seoImage } = pageProps.doc.data
+const App = ({ Component, pageProps, router }: AppProps) => {
+  const { seoTitle, seoDescription, seoImage } = pageProps.doc?.data
 
   return (
     <>
@@ -37,7 +38,11 @@ const App = ({ Component, pageProps }: AppProps) => {
       />
       <ThemeProvider theme={THEME}>
         <GlobalStyle />
-        <Navigation navigation={pageProps.navigation} />
+        <styled.Background />
+        <Navigation
+          isHome={router.asPath === '/'}
+          navigation={pageProps.navigation}
+        />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
@@ -51,7 +56,11 @@ App.getInitialProps = async (
 ): Promise<AppInitialProps> => {
   const appProps = await NextApp.getInitialProps(appContext)
   const navigation = await Client().getSingle<NavigationData>('navigation', {})
-  return { ...appProps, pageProps: { ...appProps.pageProps, navigation } }
+
+  return {
+    ...appProps,
+    pageProps: { ...appProps.pageProps, navigation },
+  }
 }
 
 export default App
