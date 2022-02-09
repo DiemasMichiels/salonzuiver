@@ -78,6 +78,7 @@ export const MenuItems = styled.ul`
   }
 
   a {
+    padding: 0.4rem 0;
     ${LinkHoverStyleTB}
   }
 `

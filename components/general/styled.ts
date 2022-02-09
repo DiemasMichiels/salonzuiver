@@ -66,6 +66,21 @@ export const LinkHoverStyleLR = css`
   }
 `
 
+export const LinkHoverStyleRL = css`
+  background: linear-gradient(
+      to right,
+      ${({ theme }) => theme.colors.green48p32} 50%,
+      transparent 50%
+    )
+    left;
+  background-size: 200%;
+  transition: 0.25s ease-in-out;
+
+  &:hover {
+    background-position: right;
+  }
+`
+
 export const LinkHoverStyleTB = css`
   background: linear-gradient(
       to top,

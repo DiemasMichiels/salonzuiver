@@ -17,16 +17,16 @@ export const GlobalStyle = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    color: ${({ theme }) => theme.colors.green20};
     font-size: 2rem;
     font-family: ${({ theme }) => theme.fonts.brand};
+    color: ${({ theme }) => theme.colors.green20};
     background-color: ${({ theme }) => theme.colors.brown92};
     overflow-x: hidden;
   }
 
   &::selection {
-    color: #ffffff;
     text-shadow: none;
+    color: #ffffff;
     background: ${({ theme }) => theme.colors.green36};
   }
 
@@ -49,13 +49,24 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    padding: 0.4rem 0;
-    color: ${({ theme }) => theme.colors.green20};
+    padding: 0 0.4rem;
     font-size: 1.6rem;
     line-height: 1.5em;
     text-decoration: none;
     text-transform: uppercase;
+    color: ${({ theme }) => theme.colors.green20};
 
     ${LinkHoverStyleLR}
+  }
+
+  button {
+    padding: 0 0.4rem;
+    font: inherit;
+    font-weight: 400;
+    color: ${({ theme }) => theme.colors.green08};
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
   }
 `

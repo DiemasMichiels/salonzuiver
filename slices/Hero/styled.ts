@@ -18,6 +18,15 @@ export const Section = styled.section`
 
 export const Content = styled.div`
   flex: 1;
+
+  h1,
+  p {
+    max-width: 600px;
+  }
+
+  .cta {
+    margin-top: 80px;
+  }
 `
 
 export const ImageContainer = styled.div`
