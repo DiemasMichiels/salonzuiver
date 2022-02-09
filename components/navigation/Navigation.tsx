@@ -22,8 +22,9 @@ const Navigation = ({ navigation, isHome = false }: Props) => {
             <Image
               src={logo.url}
               alt={logo.alt ?? undefined}
-              width={logo.dimensions.width}
-              height={logo.dimensions.height}
+              layout='fill'
+              objectFit='contain'
+              objectPosition='left'
               priority
             />
           )}

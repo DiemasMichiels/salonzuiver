@@ -95,7 +95,13 @@
           "isDirectory": true,
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/diemasmichiels/Documents/projects/salonzuiver/.slicemachine/assets/slices/Hero/default-slice/preview.png",
+            "width": 800,
+            "height": 600
+          }
+        }
       }
     }
   }

@@ -1,37 +1,51 @@
 {
-  "id": "906bb672-1dfc-4955-b516-029fa83586df",
-  "uid": "veritatis-aut-quis",
+  "id": "0d482037-fcc0-48c9-9a72-c171ae218955",
+  "uid": "dolor-quia-nihil",
   "type": "navigation",
   "data": {
     "logo": {
       "dimensions": {
         "width": 900,
-        "height": 40
+        "height": null
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=40&fit=crop"
+      "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613?w=900&h=null&fit=crop"
     },
     "menuItems": [
       {
-        "title": "unleash back-end initiatives",
+        "title": "revolutionize granular web services",
         "link": {
           "link_type": "Web",
           "url": "http://twitter.com"
         }
       },
       {
-        "title": "exploit global methodologies",
+        "title": "unleash bricks-and-clicks networks",
         "link": {
           "link_type": "Web",
           "url": "http://twitter.com"
         }
       },
       {
-        "title": "transform B2C models",
+        "title": "recontextualize leading-edge applications",
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "title": "streamline distributed deliverables",
         "link": {
           "link_type": "Web",
           "url": "http://twitter.com"
+        }
+      },
+      {
+        "title": "cultivate ubiquitous metrics",
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
         }
       }
     ],
@@ -47,28 +61,28 @@
         "social": "instagram",
         "link": {
           "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "social": "instagram",
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "social": "instagram",
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "social": "instagram",
+        "link": {
+          "link_type": "Web",
           "url": "https://prismic.io"
-        }
-      },
-      {
-        "social": "instagram",
-        "link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      {
-        "social": "instagram",
-        "link": {
-          "link_type": "Web",
-          "url": "https://prismic.io"
-        }
-      },
-      {
-        "social": "instagram",
-        "link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
         }
       }
     ]

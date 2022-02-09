@@ -15,6 +15,9 @@ export const TopBar = styled.div`
   /* backdrop-filter: blur(1.6rem); */
 
   a {
+    position: relative;
+    width: 100%;
+    height: 40px;
     background: none;
   }
 `

@@ -27,10 +27,7 @@ const App = ({
   pageProps: PageProps
 }) => {
   const { seoTitle, seoDescription, seoImage } = pageProps.doc?.data ?? {}
-  console.log('◇─◇──◇────◇────◇─乁(ツ)ㄏ─◇────◇─────◇──◇─◇')
-  console.log('router')
-  console.log(router)
-  console.log('◇─◇──◇────◇────◇─乁(ツ)ㄏ─◇────◇─────◇──◇─◇')
+
   return (
     <>
       <Head>

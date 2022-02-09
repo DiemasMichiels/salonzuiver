@@ -9,7 +9,7 @@
         "config": {
           "label": "Logo",
           "constraint": {
-            "height": 40
+            "height": null
           },
           "thumbnails": []
         },
@@ -48,7 +48,10 @@
               "config": {
                 "label": "Social",
                 "placeholder": "",
-                "options": ["instagram", "facebook"],
+                "options": [
+                  "instagram",
+                  "facebook"
+                ],
                 "default_value": "instagram"
               },
               "type": "Select"

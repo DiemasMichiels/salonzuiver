@@ -34,9 +34,17 @@ export const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.fonts.title};
   }
 
+  h1 {
+    margin: 0;
+    font-size: 5.6rem;
+    line-height: 6.4rem;
+    font-weight: 600;
+    color: ${({ theme }) => theme.colors.green08};
+  }
+
   p, span, time {
-    font-size: 2.4rem;
-    line-height: 3.6rem;
+    font-size: 2rem;
+    line-height: 3.2rem;
     font-weight: 300;
   }
 
