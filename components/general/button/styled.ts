@@ -17,6 +17,7 @@ export const Button = styled.button`
     transition-delay: 0.25s;
 
     &::before {
+      transition-delay: 0s;
       background-position: right;
     }
   }
@@ -30,6 +31,8 @@ export const Button = styled.button`
     bottom: 0px;
 
     ${LinkHoverStyleRL}
+
+    transition-delay: 0.25s;
   }
 
   span {
