@@ -1,12 +1,19 @@
 {
-  "id": "8e2751ad-828e-4798-b6aa-0bbb99d2df1e",
-  "uid": "sunt-culpa-sit",
+  "id": "8fb24bfb-cb7b-442f-853a-c5b80e2f231d",
+  "uid": "quisquam-quia-qui",
   "type": "products",
   "data": {
     "groupTitle": [
       {
         "type": "heading3",
-        "text": "Syndicate turn-key paradigms",
+        "text": "Evolve synergistic paradigms",
+        "spans": []
+      }
+    ],
+    "notice": [
+      {
+        "type": "paragraph",
+        "text": "Irure elit ea esse irure adipisicing eu enim est anim ullamco. Fugiat mollit adipisicing et non aliquip.",
         "spans": []
       }
     ]

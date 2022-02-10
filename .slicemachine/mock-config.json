@@ -19,6 +19,12 @@
           "patternType": "HEADING",
           "blocks": 1
         }
+      },
+      "notice": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
       }
     }
   },
@@ -136,30 +142,34 @@
         "slice_type": "product",
         "items": [
           {
-            "price": 3088,
-            "time": 8471
+            "price": 1616,
+            "time": 2495
           },
           {
-            "price": 3338,
-            "time": 5692
+            "price": 7191,
+            "time": 4396
           },
           {
-            "price": 8382,
-            "time": 8416
+            "price": 6453,
+            "time": 3852
+          },
+          {
+            "price": 441,
+            "time": 2844
           }
         ],
         "primary": {
           "title": [
             {
               "type": "heading4",
-              "text": "Target robust mindshare",
+              "text": "Iterate virtual channels",
               "spans": []
             }
           ],
           "description": [
             {
               "type": "paragraph",
-              "text": "Nostrud tempor deserunt eiusmod ea occaecat cupidatat ut minim anim consequat ullamco reprehenderit velit exercitation. Labore elit ipsum Lorem pariatur nostrud velit. Aliquip anim officia culpa sint ea et deserunt consectetur cillum commodo.",
+              "text": "Proident voluptate non veniam incididunt incididunt eu eu proident elit mollit voluptate.",
               "spans": []
             }
           ]

@@ -14,6 +14,15 @@
         },
         "type": "StructuredText"
       },
+      "notice": {
+        "config": {
+          "label": "Notice",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,strong,em,hyperlink"
+        },
+        "type": "StructuredText"
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
