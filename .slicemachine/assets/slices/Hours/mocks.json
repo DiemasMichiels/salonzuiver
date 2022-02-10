@@ -1,0 +1,33 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "hours",
+    "items": [
+      {
+        "day": "incentivize enterprise functionalities",
+        "hours": "implement e-business supply-chains",
+        "closed": false
+      },
+      {
+        "day": "repurpose intuitive metrics",
+        "hours": "enable best-of-breed action-items",
+        "closed": false
+      },
+      {
+        "day": "seize visionary deliverables",
+        "hours": "aggregate transparent metrics",
+        "closed": false
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Morph end-to-end functionalities",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

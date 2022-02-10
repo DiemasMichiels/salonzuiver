@@ -1,0 +1,34 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "contact",
+    "items": [
+      {
+        "icon": "mail",
+        "text": "unleash enterprise networks"
+      },
+      {
+        "icon": "phone",
+        "text": "reinvent sexy e-business"
+      },
+      {
+        "icon": "mail",
+        "text": "utilize cross-platform models"
+      },
+      {
+        "icon": "mail",
+        "text": "empower seamless niches"
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Facilitate mission-critical networks",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

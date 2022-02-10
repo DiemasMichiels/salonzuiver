@@ -26,6 +26,21 @@
           "choices": {
             "hero": {
               "type": "SharedSlice"
+            },
+            "prices": {
+              "type": "SharedSlice"
+            },
+            "contact": {
+              "type": "SharedSlice"
+            },
+            "address": {
+              "type": "SharedSlice"
+            },
+            "hours": {
+              "type": "SharedSlice"
+            },
+            "notice": {
+              "type": "SharedSlice"
             }
           }
         }

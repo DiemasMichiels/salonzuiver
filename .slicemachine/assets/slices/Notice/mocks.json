@@ -1,0 +1,17 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "notice",
+    "items": [],
+    "primary": {
+      "text": [
+        {
+          "type": "paragraph",
+          "text": "Enim ullamco do cupidatat id duis officia qui cupidatat Lorem.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

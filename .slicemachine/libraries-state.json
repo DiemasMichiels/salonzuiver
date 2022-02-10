@@ -1,6 +1,171 @@
 {
   "slices": {
     "components": {
+      "address": {
+        "library": "slices",
+        "id": "address",
+        "name": "Address",
+        "description": "Address",
+        "model": {
+          "id": "address",
+          "type": "SharedSlice",
+          "name": "Address",
+          "description": "Address",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Address",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "address": {
+                  "config": {
+                    "label": "Address",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "multi": "paragraph,strong"
+                  },
+                  "type": "StructuredText"
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "address",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Benchmark granular partnerships",
+                  "spans": []
+                }
+              ],
+              "address": [
+                {
+                  "type": "paragraph",
+                  "text": "Ea velit ad officia do aliquip nisi elit. Sunt aliqua sunt minim do consequat sint nulla veniam ipsum proident cillum qui incididunt eu culpa.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "tsx"
+        },
+        "screenshotPaths": {}
+      },
+      "contact": {
+        "library": "slices",
+        "id": "contact",
+        "name": "Contact",
+        "description": "Contact",
+        "model": {
+          "id": "contact",
+          "type": "SharedSlice",
+          "name": "Contact",
+          "description": "Contact",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Contact",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "single": "heading2"
+                  }
+                }
+              },
+              "items": {
+                "icon": {
+                  "config": {
+                    "label": "Icon",
+                    "placeholder": "",
+                    "options": [
+                      "mail",
+                      "phone",
+                      "whatsapp"
+                    ],
+                    "default_value": "mail"
+                  },
+                  "type": "Select"
+                },
+                "text": {
+                  "config": {
+                    "label": "Text",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "contact",
+            "items": [
+              {
+                "icon": "mail",
+                "text": "unleash enterprise networks"
+              },
+              {
+                "icon": "phone",
+                "text": "reinvent sexy e-business"
+              },
+              {
+                "icon": "mail",
+                "text": "utilize cross-platform models"
+              },
+              {
+                "icon": "mail",
+                "text": "empower seamless niches"
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Facilitate mission-critical networks",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "tsx"
+        },
+        "screenshotPaths": {}
+      },
       "hero": {
         "library": "slices",
         "id": "hero",
@@ -66,14 +231,14 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Seize real-time e-services",
+                  "text": "Leverage end-to-end blockchains",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Tempor labore sint nisi ea id labore irure amet. Consectetur nostrud veniam exercitation. Mollit laboris pariatur eiusmod eiusmod nostrud amet consectetur Lorem deserunt esse nisi.",
+                  "text": "Do quis anim est in eu sunt quis mollit fugiat minim ex qui esse excepteur do. Tempor velit ea eiusmod.",
                   "spans": []
                 }
               ],
@@ -84,9 +249,9 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72?w=900&h=500&fit=crop"
               },
-              "cta": "incubate e-business markets"
+              "cta": "exploit transparent content"
             }
           }
         },
@@ -102,6 +267,371 @@
             "height": 600
           }
         }
+      },
+      "hours": {
+        "library": "slices",
+        "id": "hours",
+        "name": "Hours",
+        "description": "Hours",
+        "model": {
+          "id": "hours",
+          "type": "SharedSlice",
+          "name": "Hours",
+          "description": "Hours",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Hours",
+              "primary": {
+                "title": {
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "single": "heading2"
+                  },
+                  "type": "StructuredText"
+                }
+              },
+              "items": {
+                "day": {
+                  "config": {
+                    "label": "Day",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "hours": {
+                  "config": {
+                    "label": "Hours",
+                    "placeholder": ""
+                  },
+                  "type": "Text"
+                },
+                "closed": {
+                  "config": {
+                    "label": "Closed",
+                    "placeholder_false": "false",
+                    "placeholder_true": "true",
+                    "default_value": false
+                  },
+                  "type": "Boolean"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "hours",
+            "items": [
+              {
+                "day": "incentivize enterprise functionalities",
+                "hours": "implement e-business supply-chains",
+                "closed": false
+              },
+              {
+                "day": "repurpose intuitive metrics",
+                "hours": "enable best-of-breed action-items",
+                "closed": false
+              },
+              {
+                "day": "seize visionary deliverables",
+                "hours": "aggregate transparent metrics",
+                "closed": false
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Morph end-to-end functionalities",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "tsx"
+        },
+        "screenshotPaths": {}
+      },
+      "notice": {
+        "library": "slices",
+        "id": "notice",
+        "name": "Notice",
+        "description": "Notice",
+        "model": {
+          "id": "notice",
+          "type": "SharedSlice",
+          "name": "Notice",
+          "description": "Notice",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Notice",
+              "primary": {
+                "text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Text",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "single": "paragraph,strong"
+                  }
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "notice",
+            "items": [],
+            "primary": {
+              "text": [
+                {
+                  "type": "paragraph",
+                  "text": "Enim ullamco do cupidatat id duis officia qui cupidatat Lorem.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "tsx"
+        },
+        "screenshotPaths": {}
+      },
+      "prices": {
+        "library": "slices",
+        "id": "prices",
+        "name": "Prices",
+        "description": "Prices",
+        "model": {
+          "id": "prices",
+          "type": "SharedSlice",
+          "name": "Prices",
+          "description": "Prices",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Prices",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": false,
+                    "single": "heading2"
+                  }
+                }
+              },
+              "items": {
+                "products": {
+                  "config": {
+                    "label": "Products",
+                    "customtypes": [
+                      "products"
+                    ],
+                    "select": "document"
+                  },
+                  "type": "Link"
+                },
+                "position": {
+                  "config": {
+                    "label": "Position",
+                    "placeholder": "",
+                    "options": [
+                      "auto",
+                      "left",
+                      "right"
+                    ],
+                    "default_value": "auto"
+                  },
+                  "type": "Select"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "prices",
+            "items": [
+              {
+                "products": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                },
+                "position": "right"
+              },
+              {
+                "products": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                },
+                "position": "left"
+              },
+              {
+                "products": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                },
+                "position": "right"
+              },
+              {
+                "products": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                },
+                "position": "left"
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading2",
+                  "text": "Disintermediate bricks-and-clicks niches",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "tsx"
+        },
+        "screenshotPaths": {}
+      },
+      "product": {
+        "library": "slices",
+        "id": "product",
+        "name": "Product",
+        "description": "Product",
+        "model": {
+          "id": "product",
+          "type": "SharedSlice",
+          "name": "Product",
+          "description": "Product",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Product",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Product name",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": false,
+                    "single": "heading4"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Product description",
+                    "placeholder": "A nice description of your feature",
+                    "allowTargetBlank": false,
+                    "single": "paragraph,strong,em"
+                  }
+                }
+              },
+              "items": {
+                "price": {
+                  "config": {
+                    "label": "Price",
+                    "placeholder": ""
+                  },
+                  "type": "Number"
+                },
+                "time": {
+                  "config": {
+                    "label": "Time",
+                    "placeholder": ""
+                  },
+                  "type": "Number"
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "product",
+            "items": [
+              {
+                "price": 1616,
+                "time": 2495
+              },
+              {
+                "price": 7191,
+                "time": 4396
+              },
+              {
+                "price": 6453,
+                "time": 3852
+              },
+              {
+                "price": 441,
+                "time": 2844
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading4",
+                  "text": "Iterate virtual channels",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Proident voluptate non veniam incididunt incididunt eu eu proident elit mollit voluptate.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "tsx"
+        },
+        "screenshotPaths": {}
       }
     }
   }

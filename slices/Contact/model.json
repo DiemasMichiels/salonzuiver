@@ -1,0 +1,48 @@
+{
+  "id": "contact",
+  "type": "SharedSlice",
+  "name": "Contact",
+  "description": "Contact",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Contact",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          }
+        }
+      },
+      "items": {
+        "icon": {
+          "config": {
+            "label": "Icon",
+            "placeholder": "",
+            "options": [
+              "mail",
+              "phone",
+              "whatsapp"
+            ],
+            "default_value": "mail"
+          },
+          "type": "Select"
+        },
+        "text": {
+          "config": {
+            "label": "Text",
+            "placeholder": ""
+          },
+          "type": "Text"
+        }
+      }
+    }
+  ]
+}

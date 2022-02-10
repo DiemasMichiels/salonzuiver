@@ -1,0 +1,35 @@
+{
+  "id": "address",
+  "type": "SharedSlice",
+  "name": "Address",
+  "description": "Address",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Address",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "This is where it all begins..."
+          }
+        },
+        "address": {
+          "config": {
+            "label": "Address",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph,strong"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {}
+    }
+  ]
+}

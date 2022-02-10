@@ -1,0 +1,51 @@
+{
+  "id": "prices",
+  "type": "SharedSlice",
+  "name": "Prices",
+  "description": "Prices",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Prices",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          }
+        }
+      },
+      "items": {
+        "products": {
+          "config": {
+            "label": "Products",
+            "customtypes": [
+              "products"
+            ],
+            "select": "document"
+          },
+          "type": "Link"
+        },
+        "position": {
+          "config": {
+            "label": "Position",
+            "placeholder": "",
+            "options": [
+              "auto",
+              "left",
+              "right"
+            ],
+            "default_value": "auto"
+          },
+          "type": "Select"
+        }
+      }
+    }
+  ]
+}

@@ -1,4 +1,3 @@
-import React from 'react'
 import Button from '@components/general/button/Button'
 import RichText from '@components/prismic/RichText'
 import { PRISMIC_SLICES } from '@utils/prismic/constants'

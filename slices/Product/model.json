@@ -1,0 +1,51 @@
+{
+  "id": "product",
+  "type": "SharedSlice",
+  "name": "Product",
+  "description": "Product",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Product",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Product name",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": false,
+            "single": "heading4"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Product description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": false,
+            "single": "paragraph,strong,em"
+          }
+        }
+      },
+      "items": {
+        "price": {
+          "config": {
+            "label": "Price",
+            "placeholder": ""
+          },
+          "type": "Number"
+        },
+        "time": {
+          "config": {
+            "label": "Time",
+            "placeholder": ""
+          },
+          "type": "Number"
+        }
+      }
+    }
+  ]
+}

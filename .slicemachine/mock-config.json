@@ -4,11 +4,27 @@
     "navigation": {
       "menuItems": {},
       "socialItems": {}
+    },
+    "footer": {
+      "text": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "products": {
+      "groupTitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
     }
   },
   "slices": {
-    "Hero": {
-      "0": {
+    "Hero": [
+      {
         "variation": "default-slice",
         "name": "Default slice",
         "slice_type": "hero",
@@ -17,14 +33,14 @@
           "title": [
             {
               "type": "heading1",
-              "text": "Facilitate B2C technologies",
+              "text": "Seize real-time e-services",
               "spans": []
             }
           ],
           "description": [
             {
               "type": "paragraph",
-              "text": "Irure cillum labore ea ea.",
+              "text": "Tempor labore sint nisi ea id labore irure amet. Consectetur nostrud veniam exercitation. Mollit laboris pariatur eiusmod eiusmod nostrud amet consectetur Lorem deserunt esse nisi.",
               "spans": []
             }
           ],
@@ -35,21 +51,204 @@
             },
             "alt": "Placeholder image",
             "copyright": null,
-            "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a?w=900&h=500&fit=crop"
+            "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"
           },
-          "cta": [
+          "cta": "incubate e-business markets"
+        }
+      }
+    ],
+    "Behandelingen": {},
+    "Contact": [
+      {
+        "variation": "default-slice",
+        "name": "Default slice",
+        "slice_type": "contact",
+        "items": [
+          {
+            "icon": "mail",
+            "text": "exploit collaborative ROI"
+          },
+          {
+            "icon": "mail",
+            "text": "reinvent efficient deliverables"
+          },
+          {
+            "icon": "mail",
+            "text": "implement B2C web services"
+          }
+        ],
+        "primary": {
+          "title": [
             {
-              "type": "paragraph",
-              "text": "Aliquip aliqua dolor cupidatat incididunt commodo qui enim in nulla enim tempor nisi. Proident nisi incididunt ex in magna magna ut ut commodo eu cillum consectetur tempor esse elit.",
+              "type": "heading2",
+              "text": "Harness back-end interfaces",
               "spans": []
             }
           ]
         }
-      },
-      "default-slice": {
-        "primary": {}
       }
-    },
-    "Behandelingen": {}
+    ],
+    "Address": [
+      {
+        "variation": "default-slice",
+        "name": "Default slice",
+        "slice_type": "address",
+        "items": [],
+        "primary": {
+          "title": [
+            {
+              "type": "heading1",
+              "text": "Engineer front-end solutions",
+              "spans": []
+            }
+          ],
+          "address": [
+            {
+              "type": "paragraph",
+              "text": "Occaecat sint amet quis nisi aute reprehenderit deserunt do qui proident aliqua. Amet id nulla mollit ex cupidatat deserunt incididunt esse velit anim occaecat commodo.",
+              "spans": []
+            }
+          ]
+        }
+      }
+    ],
+    "Notice": [
+      {
+        "variation": "default-slice",
+        "name": "Default slice",
+        "slice_type": "notice",
+        "items": [],
+        "primary": {
+          "text": [
+            {
+              "type": "paragraph",
+              "text": "Ex est laboris cillum id sit sint sint in qui voluptate tempor elit dolor proident. Veniam nisi non cupidatat amet ea et do sunt eiusmod ipsum consequat.",
+              "spans": []
+            }
+          ]
+        }
+      }
+    ],
+    "Product": [
+      {
+        "variation": "default-slice",
+        "name": "Default slice",
+        "slice_type": "product",
+        "items": [
+          {
+            "price": 3088,
+            "time": 8471
+          },
+          {
+            "price": 3338,
+            "time": 5692
+          },
+          {
+            "price": 8382,
+            "time": 8416
+          }
+        ],
+        "primary": {
+          "title": [
+            {
+              "type": "heading4",
+              "text": "Target robust mindshare",
+              "spans": []
+            }
+          ],
+          "description": [
+            {
+              "type": "paragraph",
+              "text": "Nostrud tempor deserunt eiusmod ea occaecat cupidatat ut minim anim consequat ullamco reprehenderit velit exercitation. Labore elit ipsum Lorem pariatur nostrud velit. Aliquip anim officia culpa sint ea et deserunt consectetur cillum commodo.",
+              "spans": []
+            }
+          ]
+        }
+      }
+    ],
+    "Prices": [
+      {
+        "variation": "default-slice",
+        "name": "Default slice",
+        "slice_type": "prices",
+        "items": [
+          {
+            "products": {
+              "link_type": "Web",
+              "url": "https://slicemachine.dev"
+            },
+            "position": "auto"
+          },
+          {
+            "products": {
+              "link_type": "Web",
+              "url": "https://prismic.io"
+            },
+            "position": "right"
+          },
+          {
+            "products": {
+              "link_type": "Web",
+              "url": "http://google.com"
+            },
+            "position": "auto"
+          },
+          {
+            "products": {
+              "link_type": "Web",
+              "url": "https://prismic.io"
+            },
+            "position": "left"
+          }
+        ],
+        "primary": {
+          "title": [
+            {
+              "type": "heading2",
+              "text": "Deploy distributed e-tailers",
+              "spans": []
+            }
+          ]
+        }
+      }
+    ],
+    "Hours": [
+      {
+        "variation": "default-slice",
+        "name": "Default slice",
+        "slice_type": "hours",
+        "items": [
+          {
+            "day": "redefine robust synergies",
+            "hours": "incentivize B2B paradigms",
+            "closed": true
+          },
+          {
+            "day": "maximize rich e-tailers",
+            "hours": "harness e-business methodologies",
+            "closed": false
+          },
+          {
+            "day": "deliver distributed mindshare",
+            "hours": "disintermediate best-of-breed methodologies",
+            "closed": true
+          },
+          {
+            "day": "syndicate sexy functionalities",
+            "hours": "cultivate clicks-and-mortar ROI",
+            "closed": true
+          }
+        ],
+        "primary": {
+          "title": [
+            {
+              "type": "heading2",
+              "text": "Harness world-class deliverables",
+              "spans": []
+            }
+          ]
+        }
+      }
+    ]
   }
 }

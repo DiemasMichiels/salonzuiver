@@ -1,0 +1,19 @@
+{
+  "id": "footer",
+  "label": "Footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "text": {
+        "config": {
+          "label": "Text",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,strong,em,hyperlink"
+        },
+        "type": "StructuredText"
+      }
+    }
+  }
+}

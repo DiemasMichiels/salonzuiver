@@ -1,0 +1,30 @@
+{
+  "id": "products",
+  "label": "Products",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "groupTitle": {
+        "config": {
+          "label": "Product group title",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "single": "heading3"
+        },
+        "type": "StructuredText"
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "product": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

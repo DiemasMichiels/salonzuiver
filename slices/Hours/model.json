@@ -1,0 +1,51 @@
+{
+  "id": "hours",
+  "type": "SharedSlice",
+  "name": "Hours",
+  "description": "Hours",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Hours",
+      "primary": {
+        "title": {
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        }
+      },
+      "items": {
+        "day": {
+          "config": {
+            "label": "Day",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "hours": {
+          "config": {
+            "label": "Hours",
+            "placeholder": ""
+          },
+          "type": "Text"
+        },
+        "closed": {
+          "config": {
+            "label": "Closed",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          },
+          "type": "Boolean"
+        }
+      }
+    }
+  ]
+}
