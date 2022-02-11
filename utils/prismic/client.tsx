@@ -1,6 +1,5 @@
 import Prismic from '@prismicio/client'
 import { routeResolver, RouteResolver } from './routes'
-
 import type { ApiOptions } from '@prismicio/client/types/Api'
 
 const createClientOptions = (

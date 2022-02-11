@@ -1,17 +1,14 @@
 import { ThemeProvider } from 'styled-components'
 import { DefaultSeo, NextSeo } from 'next-seo'
-import NextApp from 'next/app'
 import Head from 'next/head'
-import { Document } from '@prismicio/client/types/documents'
 import SEO from '@root/next-seo.config'
-import Client from '@utils/prismic/client'
 import THEME from '@theme/theme'
 import * as styled from '@components/general/styled'
 import Navigation from '@components/navigation/Navigation'
 import { GlobalStyle } from '@components/general/GlobalStyle'
-import { PRISMIC_TYPES } from '@utils/prismic/constants'
-import { DynamicPageData } from '@customtypes/dynamic-page/types'
-import type { AppContext, AppInitialProps, AppProps } from 'next/app'
+import type { Document } from '@prismicio/client/types/documents'
+import type { DynamicPageData } from '@customtypes/dynamic-page/types'
+import type { AppProps } from 'next/app'
 import type { NavigationData } from '@customtypes/navigation/types'
 
 type PageProps = {
@@ -70,23 +67,6 @@ const App = ({
       </ThemeProvider>
     </>
   )
-}
-
-// This will always make the pages SSR.
-// If pages can be statically rendered this cannot be done here and needs to move to the dynamic pages
-App.getInitialProps = async (
-  appContext: AppContext,
-): Promise<AppInitialProps> => {
-  const appProps = await NextApp.getInitialProps(appContext)
-  const navigation = await Client().getSingle<NavigationData>(
-    PRISMIC_TYPES.NAVIGATION,
-    {},
-  )
-
-  return {
-    ...appProps,
-    pageProps: { ...appProps.pageProps, navigation },
-  }
 }
 
 export default App

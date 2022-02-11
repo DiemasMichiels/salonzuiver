@@ -4,7 +4,7 @@ import type {
   Slice,
   RichTextField,
   SelectField,
-  RelationField,
+  FilledLinkToDocumentField,
 } from '@prismicio/types'
 
 export type PricesSlice = Slice<
@@ -13,7 +13,7 @@ export type PricesSlice = Slice<
     title: RichTextField
   },
   {
-    products: RelationField
+    products: FilledLinkToDocumentField
     closed: SelectField
   }
 >

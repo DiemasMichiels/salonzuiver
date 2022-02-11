@@ -23,6 +23,7 @@ export const Button = styled.button`
   }
 
   &::before {
+    z-index: -1;
     position: absolute;
     content: '';
     width: 40%;

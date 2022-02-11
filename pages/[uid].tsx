@@ -1,12 +1,17 @@
 import Prismic from '@prismicio/client'
 import { PRISMIC_TYPES } from '@utils/prismic/constants'
 import { Client } from '@utils/prismic/client'
+import { getStaticsForSlices } from '@utils/api/statics'
+import type { NavigationData } from '@customtypes/navigation/types'
 import type { DynamicPageData } from '@customtypes/dynamic-page/types'
 import type { Document } from '@prismicio/client/types/documents'
 import type { GetStaticProps, NextPage } from 'next'
+import type { Statics } from '@utils/api/statics'
+import type { FooterData } from '@customtypes/footer/types'
 
 type Props = {
   doc: Document<DynamicPageData>
+  statics: Statics
 }
 
 const DynamicPage: NextPage<Props> = ({ doc }) => {
@@ -21,12 +26,22 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     uid,
     {},
   )
+  const navigation = await Client().getSingle<NavigationData>(
+    PRISMIC_TYPES.NAVIGATION,
+    {},
+  )
+  const footer = await Client().getSingle<FooterData>(PRISMIC_TYPES.FOOTER, {})
+
+  const statics = await getStaticsForSlices(doc.data.slices)
 
   return {
     props: {
       doc,
+      navigation,
+      footer,
+      statics,
     },
-    revalidate: 60,
+    revalidate: 600,
   }
 }
 

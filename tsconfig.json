@@ -15,6 +15,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "importsNotUsedAsValues": "error",
     "paths": {
       "@assets": ["assets"],
       "@assets/*": ["assets/*"],
