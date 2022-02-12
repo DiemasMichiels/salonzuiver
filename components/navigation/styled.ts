@@ -11,7 +11,7 @@ export const TopBar = styled.div<{ small?: boolean }>`
   left: 0;
   right: ${({ theme }) => theme.sizes.sideBarWidth};
   padding: 40px;
-  backdrop-filter: blur(1.6rem) opacity(0);
+  backdrop-filter: blur(2rem) opacity(0);
   transition: all 0.15s ease-in;
 
   ${({ small }) =>
@@ -19,7 +19,7 @@ export const TopBar = styled.div<{ small?: boolean }>`
     css`
       height: 80px;
       padding: 20px 40px;
-      backdrop-filter: blur(1.6rem) opacity(1);
+      backdrop-filter: blur(2rem) opacity(1);
     `}
 
   a {
@@ -53,6 +53,14 @@ export const SocialItems = styled.ul`
   margin: 0;
   padding: 0;
   list-style-type: none;
+
+  svg {
+    flex-shrink: 0;
+
+    path {
+      fill: ${({ theme }) => theme.colors.green08};
+    }
+  }
 
   a {
     display: block;

@@ -36,12 +36,12 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-family: ${({ theme }) => theme.fonts.title};
     font-weight: 600;
+    color: ${({ theme }) => theme.colors.green08};
   }
 
   h1 {
     font-size: 5.6rem;
     line-height: 6.4rem;
-    color: ${({ theme }) => theme.colors.green08};
   }
 
   h2 {

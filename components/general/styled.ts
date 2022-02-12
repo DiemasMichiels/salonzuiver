@@ -20,12 +20,6 @@ export const ContainerStyle = css`
   @media (min-width: 1200px) {
     max-width: 1170px;
   }
-  @media (min-width: 1440px) {
-    width: auto;
-    max-width: initial;
-    margin-right: 12rem;
-    margin-left: 12rem;
-  }
 `
 
 export const Background = styled.div`

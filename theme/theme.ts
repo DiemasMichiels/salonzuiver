@@ -11,7 +11,7 @@ const THEME = {
     brown72: '#CEC5A1',
     brown92: '#F1EFE4',
     brown96: '#F8F7F2',
-    red50: '#A52612',
+    red36: '#A52612',
   },
   fonts: {
     brand: '"Oswald", sans-serif',

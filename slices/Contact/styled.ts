@@ -16,6 +16,10 @@ export const Address = styled.address`
     gap: 4px;
   }
 
+  svg path {
+    fill: ${({ theme }) => theme.colors.green20};
+  }
+
   div + div {
     margin-top: 32px;
 

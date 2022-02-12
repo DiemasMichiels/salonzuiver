@@ -13,6 +13,10 @@ export const Section = styled.section`
 
   @media (min-width: 1440px) {
     margin-right: ${({ theme }) => theme.sizes.sideBarWidth};
+    width: auto;
+    max-width: initial;
+    margin-right: 12rem;
+    margin-left: 12rem;
   }
 `
 

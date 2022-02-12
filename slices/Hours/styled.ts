@@ -35,7 +35,7 @@ export const TableRow = styled.tr<{ closed?: boolean }>`
       }
 
       td {
-        color: ${({ theme }) => theme.colors.red50};
+        color: ${({ theme }) => theme.colors.red36};
       }
     `}
 `

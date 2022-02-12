@@ -19,6 +19,10 @@ export const NoticeSection = styled.section`
 
     svg {
       flex-shrink: 0;
+
+      path {
+        fill: ${({ theme }) => theme.colors.brown32};
+      }
     }
 
     p {
