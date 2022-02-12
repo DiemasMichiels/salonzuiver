@@ -1,4 +1,6 @@
 import RichText from '@components/prismic/RichText'
+import InfoIcon from '@assets/icons/info.svg'
+import * as styled from './styled'
 import type { PRISMIC_SLICES } from '@utils/prismic/constants'
 import type { Slice, RichTextField } from '@prismicio/types'
 
@@ -14,15 +16,12 @@ type Props = {
 }
 
 const Notice = ({ slice }: Props) => (
-  <section>
-    <span className='title'>
-      {slice.primary.text ? (
-        <RichText render={slice.primary.text} />
-      ) : (
-        <h2>Template slice, update me!</h2>
-      )}
-    </span>
-  </section>
+  <styled.NoticeSection>
+    <div>
+      <InfoIcon />
+      <RichText render={slice.primary.text} />
+    </div>
+  </styled.NoticeSection>
 )
 
 export default Notice

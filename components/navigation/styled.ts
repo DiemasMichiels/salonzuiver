@@ -31,6 +31,7 @@ export const TopBar = styled.div<{ small?: boolean }>`
 `
 
 export const SideBar = styled.div<{ isHome?: boolean }>`
+  z-index: 8;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -87,6 +88,10 @@ export const MenuItems = styled.ul`
 
   a {
     padding: 0.4rem 0;
+    font-size: 1.6rem;
+    line-height: 1.5em;
+    font-weight: 400;
+    text-transform: uppercase;
     ${LinkHoverStyleTB}
   }
 `

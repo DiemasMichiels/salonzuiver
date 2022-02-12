@@ -94,8 +94,8 @@
         }
       }
     ],
-    "Address": [
-      {
+    "Address": {
+      "0": {
         "variation": "default-slice",
         "name": "Default slice",
         "slice_type": "address",
@@ -116,8 +116,18 @@
             }
           ]
         }
+      },
+      "default-slice": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
       }
-    ],
+    },
     "Notice": [
       {
         "variation": "default-slice",

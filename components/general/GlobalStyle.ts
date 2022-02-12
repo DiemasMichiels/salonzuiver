@@ -12,13 +12,18 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
+    min-height: 100vh;
     padding: 0;
     margin: 0;
     font-size: 2rem;
     font-family: ${({ theme }) => theme.fonts.brand};
     color: ${({ theme }) => theme.colors.green20};
-    background-color: ${({ theme }) => theme.colors.brown92};
+    background-color: ${({ theme }) => theme.colors.brown96};
     overflow-x: hidden;
+  }
+
+  #__next {
+    min-height: 100vh;
   }
 
   &::selection {
@@ -69,18 +74,17 @@ export const GlobalStyle = createGlobalStyle`
     letter-spacing: 0.01em;
   }
 
-  p, span, time {
+  p, a, span, time, address {
+    margin: 0;
     font-size: 2rem;
     line-height: 3.2rem;
     font-weight: 300;
+    font-style: normal;
   }
 
   a {
     padding: 0 0.4rem;
-    font-size: 1.6rem;
-    line-height: 1.5em;
     text-decoration: none;
-    text-transform: uppercase;
     color: ${({ theme }) => theme.colors.green20};
 
     ${LinkHoverStyleLR}

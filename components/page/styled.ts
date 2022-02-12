@@ -4,7 +4,9 @@ export const Page = styled.div<{ isFirstBig?: boolean }>`
   ${({ theme, isFirstBig }) =>
     !isFirstBig &&
     css`
-      margin-top: ${theme.sizes.topBarHeight};
-      margin-bottom: 100px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding-top: ${theme.sizes.topBarHeight};
     `}
 `

@@ -22,9 +22,10 @@
                 "title": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "heading1",
                     "label": "Title",
-                    "placeholder": "This is where it all begins..."
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2"
                   }
                 },
                 "address": {
@@ -50,15 +51,15 @@
             "primary": {
               "title": [
                 {
-                  "type": "heading1",
-                  "text": "Benchmark granular partnerships",
+                  "type": "heading2",
+                  "text": "Engage value-added systems",
                   "spans": []
                 }
               ],
               "address": [
                 {
                   "type": "paragraph",
-                  "text": "Ea velit ad officia do aliquip nisi elit. Sunt aliqua sunt minim do consequat sint nulla veniam ipsum proident cillum qui incididunt eu culpa.",
+                  "text": "Mollit ullamco deserunt mollit culpa culpa. Anim laboris aliquip voluptate in labore nulla. Velit occaecat laboris magna officia eiusmod excepteur non ullamco aliqua aliquip Lorem consequat reprehenderit ad.",
                   "spans": []
                 }
               ]
@@ -70,7 +71,13 @@
           "isDirectory": true,
           "extension": "tsx"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/diemasmichiels/Documents/projects/salonzuiver/.slicemachine/assets/slices/Address/default-slice/preview.png",
+            "width": 800,
+            "height": 64
+          }
+        }
       },
       "contact": {
         "library": "slices",
