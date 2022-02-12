@@ -5,6 +5,8 @@ export const NoticeSection = styled.section`
   flex: 1;
   display: flex;
   align-items: flex-end;
+  width: 100%;
+  margin-top: 40px;
 
   ${ContainerStyle}
 

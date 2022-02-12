@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { LinkHoverStyleTB } from '@components/general/styled'
+import { LinkHoverStyleLR, LinkHoverStyleTB } from '@components/general/styled'
 
 export const TopBar = styled.div<{ small?: boolean }>`
   z-index: 8;
@@ -59,7 +59,7 @@ export const SocialItems = styled.ul`
     height: 2.8rem;
     padding: 0.2rem;
 
-    ${LinkHoverStyleTB}
+    ${LinkHoverStyleLR}
   }
 `
 
@@ -92,6 +92,8 @@ export const MenuItems = styled.ul`
     line-height: 1.5em;
     font-weight: 400;
     text-transform: uppercase;
+    color: ${({ theme }) => theme.colors.green08};
+
     ${LinkHoverStyleTB}
   }
 `
