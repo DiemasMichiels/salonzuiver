@@ -1,8 +1,8 @@
 import { SliceSimulator } from '@prismicio/slice-simulator-react'
-import { FunctionComponent } from 'react'
 import Slices from '@components/slices/Slices'
 import state from '@slicemachine/libraries-state.json'
-import SliceTypes from '@slices/sliceTypes'
+import type { FunctionComponent } from 'react'
+import type SliceTypes from '@slices/sliceTypes'
 import type LibrariesState from '@slicemachine/core/build/src/models/LibrariesState'
 
 const SliceSimulatorPage = () => (

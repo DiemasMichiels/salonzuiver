@@ -1,6 +1,6 @@
-import { ImageField } from '@prismicio/types'
 import Image from 'next/image'
 import * as styled from './styled'
+import type { ImageField } from '@prismicio/types'
 
 type Props = {
   image: ImageField
