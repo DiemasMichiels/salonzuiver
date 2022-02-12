@@ -1,18 +1,26 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { LinkHoverStyleTB } from '@components/general/styled'
 
-export const TopBar = styled.div`
-  position: absolute;
+export const TopBar = styled.div<{ small?: boolean }>`
+  z-index: 8;
+  position: fixed;
   display: flex;
   align-items: center;
   height: ${({ theme }) => theme.sizes.topBarHeight};
   top: 0;
   left: 0;
-  padding: 4rem;
   right: ${({ theme }) => theme.sizes.sideBarWidth};
+  padding: 40px;
+  backdrop-filter: blur(1.6rem) opacity(0);
+  transition: all 0.15s ease-in;
 
-  /* TODO: On scroll this needs to shrink and blur */
-  /* backdrop-filter: blur(1.6rem); */
+  ${({ small }) =>
+    small &&
+    css`
+      height: 80px;
+      padding: 20px 40px;
+      backdrop-filter: blur(1.6rem) opacity(1);
+    `}
 
   a {
     position: relative;
@@ -23,7 +31,7 @@ export const TopBar = styled.div`
 `
 
 export const SideBar = styled.div<{ isHome?: boolean }>`
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;

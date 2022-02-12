@@ -7,6 +7,7 @@ const THEME = {
     green36: '#74A512',
     green48: '#9BDC18',
     green48p32: 'rgba(155, 220, 24, 0.32)',
+    brown32: '#6C6137',
     brown92: '#F8F7F2',
     brown72: '#CEC5A1',
   },

@@ -1,5 +1,4 @@
 import { HOMEPAGE_UID, PRISMIC_TYPES } from './constants'
-
 import type { FilledLinkToDocumentField } from '@prismicio/types'
 
 export const linkResolver = (doc: FilledLinkToDocumentField) => {

@@ -8,10 +8,7 @@ export const GlobalStyle = createGlobalStyle`
 
   html,
   body {
-    width: 100vw;
-    height: 100vh;
     font-size: 62.5%;
-    overflow: hidden;
   }
 
   body {
@@ -30,16 +27,46 @@ export const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.colors.green36};
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3 {
+    margin: 0;
     font-family: ${({ theme }) => theme.fonts.title};
+    font-weight: 600;
   }
 
   h1 {
-    margin: 0;
     font-size: 5.6rem;
     line-height: 6.4rem;
-    font-weight: 600;
     color: ${({ theme }) => theme.colors.green08};
+  }
+
+  h2 {
+    font-size: 4rem;
+    line-height: 6.4rem;
+  }
+
+  h3 {
+    position: relative;
+    padding: 0 0 16px 0;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: ${({ theme }) => theme.colors.brown72};
+    }
+  }
+
+  h4 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 3.2rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
   }
 
   p, span, time {

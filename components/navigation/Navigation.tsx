@@ -1,10 +1,13 @@
 import Image from 'next/image'
+import { useWindowScroll } from '@mantine/hooks'
 import Link from '@components/general/Link/Link'
 import FacebookIcon from '@assets/icons/facebook.svg'
 import InstagramIcon from '@assets/icons/instagram.svg'
 import * as styled from './styled'
 import type { NavigationData } from '@customtypes/navigation/types'
 import type { Document } from '@prismicio/client/types/documents'
+
+const SMALL_TOP_BAR_AFTER_X_PX = 60
 
 type Props = {
   navigation: Document<NavigationData>
@@ -14,9 +17,11 @@ type Props = {
 const Navigation = ({ navigation, isHome = false }: Props) => {
   const { logo, socialItems, menuItems } = navigation.data
 
+  const [scroll] = useWindowScroll()
+
   return (
     <nav>
-      <styled.TopBar>
+      <styled.TopBar small={scroll.y > SMALL_TOP_BAR_AFTER_X_PX}>
         <Link href='/'>
           {logo?.url && (
             <Image

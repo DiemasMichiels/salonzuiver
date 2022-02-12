@@ -1,4 +1,6 @@
 import RichText from '@components/prismic/RichText'
+import Products from '@customtypes/products/Products'
+import * as styled from './styled'
 import type { PRISMIC_SLICES } from '@utils/prismic/constants'
 import type {
   Slice,
@@ -15,7 +17,7 @@ export type PricesSlice = Slice<
   },
   {
     products: FilledLinkToDocumentField
-    closed: SelectField
+    position: SelectField<'left' | 'right'>
   }
 >
 
@@ -24,16 +26,38 @@ type Props = {
   products: Statics['products']
 }
 
-const Prices = ({ slice }: Props) => (
-  <section>
-    <span className='title'>
-      {slice.primary.title ? (
-        <RichText render={slice.primary.title} />
-      ) : (
-        <h2>Template slice, update me!</h2>
-      )}
-    </span>
-  </section>
-)
+const Prices = ({ slice, products }: Props) => {
+  return (
+    <styled.Section>
+      <RichText render={slice.primary.title} />
+      <styled.Grid>
+        <div>
+          {products &&
+            slice.items.map(
+              (item) =>
+                item.position === 'left' && (
+                  <Products
+                    key={item.products.id}
+                    doc={products[item.products.id]}
+                  />
+                ),
+            )}
+        </div>
+        <div>
+          {products &&
+            slice.items.map(
+              (item) =>
+                item.position === 'right' && (
+                  <Products
+                    key={item.products.id}
+                    doc={products[item.products.id]}
+                  />
+                ),
+            )}
+        </div>
+      </styled.Grid>
+    </styled.Section>
+  )
+}
 
 export default Prices

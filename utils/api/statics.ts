@@ -6,7 +6,7 @@ import type { ProductsData } from '@customtypes/products/types'
 import type SliceTypes from '@slices/sliceTypes'
 
 export type Statics = {
-  products?: Document<ProductsData>[]
+  products: Record<string, Document<ProductsData>> | null
 }
 
 const getPrices = async (slices: SliceTypes[]) => {
@@ -24,7 +24,16 @@ const getPrices = async (slices: SliceTypes[]) => {
       pageSize: 100,
     })
 
-    return productResult.results.length ? productResult.results : undefined
+    if (productResult.results.length) {
+      return productResult.results.reduce<
+        Record<string, Document<ProductsData>>
+      >((acc, item) => {
+        acc[item.id] = item
+        return { ...acc }
+      }, {})
+    }
+
+    return null
   }
 }
 
@@ -33,5 +42,5 @@ export const getStaticsForSlices = async (
 ): Promise<Statics> => {
   const products = await getPrices(slices)
 
-  return { products }
+  return { products: products ?? null }
 }

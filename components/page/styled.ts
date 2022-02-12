@@ -5,5 +5,6 @@ export const Page = styled.div<{ isFirstBig?: boolean }>`
     !isFirstBig &&
     css`
       margin-top: ${theme.sizes.topBarHeight};
+      margin-bottom: 100px;
     `}
 `

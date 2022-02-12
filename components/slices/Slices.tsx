@@ -1,4 +1,4 @@
-import { Hero, Prices } from '@slices'
+import { Hero, Prices, Product } from '@slices'
 import { PRISMIC_SLICES } from '@utils/prismic/constants'
 import type SliceTypes from '@slices/sliceTypes'
 import type { Statics } from '@utils/api/statics'
@@ -20,9 +20,11 @@ const Slices = ({ slices, statics }: Props) => {
               <Prices
                 key={`${slice}-${i}`}
                 slice={slice}
-                products={statics?.products}
+                products={statics?.products ?? null}
               />
             )
+          case PRISMIC_SLICES.PRODUCT:
+            return <Product key={`${slice}-${i}`} slice={slice} />
           default:
             console.info('Slice not found for: ', slice.slice_type)
             return null

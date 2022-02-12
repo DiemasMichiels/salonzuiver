@@ -1,9 +1,9 @@
 import Button from '@components/general/button/Button'
 import RichText from '@components/prismic/RichText'
-import { PRISMIC_SLICES } from '@utils/prismic/constants'
 import FancyImage from '@components/fancyImage/FancyImage'
 import DownCircleIcon from '@assets/icons/downCircle.svg'
 import * as styled from './styled'
+import type { PRISMIC_SLICES } from '@utils/prismic/constants'
 import type {
   ImageField,
   KeyTextField,
