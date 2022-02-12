@@ -2,6 +2,8 @@ import Prismic from '@prismicio/client'
 import { PRISMIC_TYPES } from '@utils/prismic/constants'
 import { Client } from '@utils/prismic/client'
 import { getStaticsForSlices } from '@utils/api/statics'
+import Slices from '@components/slices/Slices'
+import Page from '@components/page/Page'
 import type { NavigationData } from '@customtypes/navigation/types'
 import type { DynamicPageData } from '@customtypes/dynamic-page/types'
 import type { Document } from '@prismicio/client/types/documents'
@@ -14,8 +16,12 @@ type Props = {
   statics: Statics
 }
 
-const DynamicPage: NextPage<Props> = ({ doc }) => {
-  return <div>{doc.data.pageTitle}</div>
+const DynamicPage: NextPage<Props> = ({ doc, statics }) => {
+  return (
+    <Page firstSlice={doc.data.slices[0]}>
+      <Slices slices={doc.data.slices} statics={statics} />
+    </Page>
+  )
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {

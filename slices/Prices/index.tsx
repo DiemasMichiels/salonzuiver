@@ -6,6 +6,7 @@ import type {
   SelectField,
   FilledLinkToDocumentField,
 } from '@prismicio/types'
+import type { Statics } from '@utils/api/statics'
 
 export type PricesSlice = Slice<
   PRISMIC_SLICES.PRICES,
@@ -20,6 +21,7 @@ export type PricesSlice = Slice<
 
 type Props = {
   slice: PricesSlice
+  products: Statics['products']
 }
 
 const Prices = ({ slice }: Props) => (

@@ -1,6 +1,7 @@
 import { HOMEPAGE_UID, PRISMIC_TYPES } from '@utils/prismic/constants'
 import { Client } from '@utils/prismic/client'
 import Slices from '@components/slices/Slices'
+import Page from '@components/page/Page'
 import type { NavigationData } from '@customtypes/navigation/types'
 import type { Document } from '@prismicio/client/types/documents'
 import type { GetStaticProps, NextPage } from 'next'
@@ -12,7 +13,11 @@ type Props = {
 }
 
 const Home: NextPage<Props> = ({ doc }) => {
-  return <Slices slices={doc.data.slices} />
+  return (
+    <Page firstSlice={doc.data.slices[0]}>
+      <Slices slices={doc.data.slices} />
+    </Page>
+  )
 }
 
 export const getStaticProps: GetStaticProps = async () => {
