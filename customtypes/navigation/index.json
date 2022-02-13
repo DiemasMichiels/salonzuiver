@@ -15,6 +15,13 @@
         },
         "type": "Image"
       },
+      "menuText": {
+        "config": {
+          "label": "Menu Text",
+          "placeholder": "Menu"
+        },
+        "type": "Text"
+      },
       "menuItems": {
         "config": {
           "label": "Menu items",

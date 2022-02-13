@@ -28,16 +28,18 @@ const Hours = ({ slice }: Props) => (
   <styled.HoursSection>
     <RichText render={slice.primary.title} />
     <styled.Table>
-      {slice.items.map((item) => (
-        <styled.TableRow key={item.day} closed={item.closed}>
-          <th>
-            <span>{item.day}</span>
-          </th>
-          <td>
-            <span>{item.hours}</span>
-          </td>
-        </styled.TableRow>
-      ))}
+      <tbody>
+        {slice.items.map((item) => (
+          <styled.TableRow key={item.day} closed={item.closed}>
+            <th>
+              <span>{item.day}</span>
+            </th>
+            <td>
+              <span>{item.hours}</span>
+            </td>
+          </styled.TableRow>
+        ))}
+      </tbody>
     </styled.Table>
   </styled.HoursSection>
 )

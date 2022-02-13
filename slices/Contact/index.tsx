@@ -46,7 +46,7 @@ const Contact = ({ slice }: Props) => (
     <styled.Address>
       {slice.items.map((item) =>
         item.text && item.icon ? (
-          <div key={item.text}>
+          <div key={`${item.text}-${item.icon}`}>
             {getIcon(item.icon)}
             <a
               href={

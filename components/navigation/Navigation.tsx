@@ -1,13 +1,16 @@
 import Image from 'next/image'
-import { useWindowScroll } from '@mantine/hooks'
+import { useWindowScroll, useViewportSize } from '@mantine/hooks'
+import { useState } from 'react'
 import Link from '@components/general/Link/Link'
 import FacebookIcon from '@assets/icons/facebook.svg'
 import InstagramIcon from '@assets/icons/instagram.svg'
+import CloseIcon from '@assets/icons/close.svg'
 import * as styled from './styled'
 import type { NavigationData } from '@customtypes/navigation/types'
 import type { Document } from '@prismicio/client/types/documents'
 
 const SMALL_TOP_BAR_AFTER_X_PX = 60
+const MOBILE_MENU_MAX_WIDTH = 768
 
 type Props = {
   navigation: Document<NavigationData>
@@ -15,9 +18,25 @@ type Props = {
 }
 
 const Navigation = ({ navigation, isHome = false }: Props) => {
-  const { logo, socialItems, menuItems } = navigation.data
+  const { logo, socialItems, menuText, menuItems } = navigation.data
 
   const [scroll] = useWindowScroll()
+  const { width } = useViewportSize()
+  const isMobile = width < MOBILE_MENU_MAX_WIDTH
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const MenuItems = (
+    <styled.MenuItems isMenuOpen={isMenuOpen}>
+      {menuItems.map((item, index) => (
+        <li key={index}>
+          <Link href={item.link} onClick={() => setIsMenuOpen(false)}>
+            {item.title}
+          </Link>
+        </li>
+      ))}
+    </styled.MenuItems>
+  )
 
   return (
     <nav>
@@ -35,8 +54,8 @@ const Navigation = ({ navigation, isHome = false }: Props) => {
           )}
         </Link>
       </styled.TopBar>
-      <styled.SideBar isHome={isHome}>
-        <styled.SocialItems>
+      <styled.SideBar isMenuOpen={isMenuOpen} isHome={isHome}>
+        <styled.SocialItems isMenuOpen={isMenuOpen}>
           {socialItems.map((item, index) => (
             <li key={index}>
               <Link href={item.link}>
@@ -46,14 +65,14 @@ const Navigation = ({ navigation, isHome = false }: Props) => {
             </li>
           ))}
         </styled.SocialItems>
-        <styled.MenuItems>
-          {menuItems.map((item, index) => (
-            <li key={index}>
-              <Link href={item.link}>{item.title}</Link>
-            </li>
-          ))}
-        </styled.MenuItems>
+        {isMobile && (
+          <styled.MenuButton onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <CloseIcon /> : menuText}
+          </styled.MenuButton>
+        )}
+        {!isMobile && MenuItems}
       </styled.SideBar>
+      {isMobile && MenuItems}
     </nav>
   )
 }

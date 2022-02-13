@@ -5,16 +5,17 @@ import type {
   FilledLinkToWebField,
   LinkField,
 } from '@prismicio/types'
-import type { ReactNode } from 'react'
+import type { MouseEventHandler, ReactNode } from 'react'
 
 type Props = {
   href: LinkField | string
   children: ReactNode
   target?: '_blank' | string
   className?: string
+  onClick?: MouseEventHandler
 }
 
-const Link = ({ href, children, target, className }: Props) => {
+const Link = ({ href, children, target, onClick, className }: Props) => {
   let actualHref = '#'
   let actualTarget = target
 
@@ -30,6 +31,7 @@ const Link = ({ href, children, target, className }: Props) => {
   return (
     <NextLink href={actualHref}>
       <a
+        onClick={onClick}
         className={className}
         target={actualTarget}
         rel={actualTarget === '_blank' ? 'noreferrer noopener' : undefined}
