@@ -52,7 +52,7 @@ export const SideBar = styled.div<{ isMenuOpen?: boolean; isHome?: boolean }>`
   align-items: center;
   gap: 20px;
   height: 48px;
-  bottom: 16px;
+  bottom: 32px;
   left: 50%;
   padding: 0 24px;
   border-radius: 48px;
