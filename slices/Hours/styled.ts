@@ -1,6 +1,12 @@
 import styled, { css } from 'styled-components'
 
 export const HoursSection = styled.section`
+  flex-grow: 1;
+
+  @media (min-width: 992px) {
+    flex-grow: initial;
+  }
+
   h2 {
     margin-bottom: 16px;
   }

@@ -2,10 +2,16 @@ import styled from 'styled-components'
 import { ContainerStyle } from '@components/general/styled'
 
 export const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  gap: 15%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 64px;
   margin-top: 40px;
 
   ${ContainerStyle}
+
+  @media (min-width: 992px) {
+    justify-content: space-between;
+    gap: 0;
+  }
 `

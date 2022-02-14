@@ -9,14 +9,17 @@ export const Section = styled.section`
   gap: 100px;
   height: 100vh;
   margin-right: ${({ theme }) => theme.sizes.sideBarWidth};
-  padding: 60px 0;
+  padding: 60px 15px;
 
+  @media (min-width: 768px) {
+    padding-right: 0;
+  }
   @media (min-width: 1440px) {
     margin-right: ${({ theme }) => theme.sizes.sideBarWidth};
     width: auto;
     max-width: initial;
-    margin-right: 12rem;
-    margin-left: 12rem;
+    margin-right: 120px;
+    margin-left: 120px;
   }
 `
 
@@ -28,6 +31,10 @@ export const Content = styled.div`
     max-width: 600px;
   }
 
+  p {
+    margin-top: 24px;
+  }
+
   .cta {
     margin-top: 80px;
   }
@@ -35,7 +42,12 @@ export const Content = styled.div`
 
 export const ImageContainer = styled.div`
   position: relative;
+  display: none;
   width: 40%;
   height: 100%;
   margin-right: 24px;
+
+  @media (min-width: 768px) {
+    display: block;
+  }
 `

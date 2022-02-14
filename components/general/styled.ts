@@ -3,8 +3,8 @@ import { fadeIn } from './keyframes'
 
 export const ContainerStyle = css`
   width: 100%;
-  padding-right: calc(15px + ${({ theme }) => theme.sizes.sideBarWidth});
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
   margin-right: auto;
   margin-left: auto;
 
@@ -13,6 +13,7 @@ export const ContainerStyle = css`
   }
   @media (min-width: 768px) {
     max-width: 720px;
+    padding-right: calc(16px + ${({ theme }) => theme.sizes.sideBarWidth});
   }
   @media (min-width: 992px) {
     max-width: 960px;

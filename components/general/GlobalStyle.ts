@@ -40,8 +40,13 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 5.6rem;
-    line-height: 6.4rem;
+    font-size: 2.8rem;
+    line-height: 3.2rem;
+
+    @media (min-width: 576px) {
+      font-size: 5.6rem;
+      line-height: 6.4rem;
+    }
   }
 
   h2 {

@@ -13,6 +13,14 @@ export const Section = styled.section`
 
 export const Grid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 120px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+
+  @media (min-width: 992px) {
+    gap: 120px;
+  }
 `

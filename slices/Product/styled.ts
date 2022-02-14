@@ -13,9 +13,12 @@ export const Product = styled.div`
 
 export const Title = styled.div`
   display: flex;
+  flex-wrap: wrap;
 
   h4 {
     flex: 1;
+    white-space: nowrap;
+    margin-right: 4px;
   }
 `
 

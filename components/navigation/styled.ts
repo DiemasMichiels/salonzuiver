@@ -102,6 +102,10 @@ export const SocialItems = styled.ul<{ isMenuOpen?: boolean }>`
     path {
       fill: ${({ theme, isMenuOpen }) =>
         isMenuOpen ? theme.colors.brown92 : theme.colors.green08};
+
+      @media (min-width: 768px) {
+        fill: ${({ theme }) => theme.colors.green08};
+      }
     }
   }
 
