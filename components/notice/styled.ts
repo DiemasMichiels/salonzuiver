@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Notice = styled.div`
   display: flex;
-  align-items: center;
   margin: 8px 0 0 0;
   padding: 8px;
   background-color: ${({ theme }) => theme.colors.green48p32};

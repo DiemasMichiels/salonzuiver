@@ -1,9 +1,11 @@
 import styled, { css } from 'styled-components'
 
 export const HoursSection = styled.section`
+  width: 100%;
   flex-grow: 1;
 
   @media (min-width: 992px) {
+    width: auto;
     flex-grow: 0.5;
   }
 
