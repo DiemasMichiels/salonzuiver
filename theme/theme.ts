@@ -20,6 +20,7 @@ const THEME = {
   sizes: {
     topBarHeight: '120px',
     sideBarWidth: '76px',
+    footerHeight: '32px',
   },
 }
 

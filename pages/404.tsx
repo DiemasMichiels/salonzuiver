@@ -1,8 +1,15 @@
-import Error from 'next/error'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import type { NextPage } from 'next'
 
 const NotFound: NextPage = () => {
-  return <Error statusCode={404} />
+  const router = useRouter()
+
+  useEffect(() => {
+    router.replace('/')
+  })
+
+  return null
 }
 
 export default NotFound

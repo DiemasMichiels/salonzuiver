@@ -6,7 +6,7 @@ export const Page = styled.div<{ isFirstBig?: boolean }>`
     css`
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      min-height: calc(100vh - ${({ theme }) => theme.sizes.footerHeight});
       padding-top: 64px;
       padding-bottom: 64px;
 

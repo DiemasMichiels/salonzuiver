@@ -7,7 +7,7 @@ export const Section = styled.section`
   display: flex;
   align-items: center;
   gap: 100px;
-  height: 100vh;
+  height: calc(100vh - ${({ theme }) => theme.sizes.footerHeight});
   margin-right: ${({ theme }) => theme.sizes.sideBarWidth};
   padding: 60px 15px;
 

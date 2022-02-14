@@ -4,16 +4,19 @@ import Head from 'next/head'
 import SEO from '@root/next-seo.config'
 import THEME from '@theme/theme'
 import * as styled from '@components/general/styled'
-import Navigation from '@components/navigation/Navigation'
+import Navigation from '@customtypes/navigation/Navigation'
 import { GlobalStyle } from '@components/general/GlobalStyle'
+import Footer from '@customtypes/footer/Footer'
 import type { Document } from '@prismicio/client/types/documents'
 import type { DynamicPageData } from '@customtypes/dynamic-page/types'
 import type { AppProps } from 'next/app'
 import type { NavigationData } from '@customtypes/navigation/types'
+import type { FooterData } from '@customtypes/footer/types'
 
 type PageProps = {
   doc: Document<DynamicPageData>
   navigation: Document<NavigationData>
+  footer: Document<FooterData>
 }
 
 const App = ({
@@ -64,6 +67,7 @@ const App = ({
           />
         )}
         <Component {...pageProps} />
+        <Footer isHome={router.pathname === '/'} footer={pageProps.footer} />
       </ThemeProvider>
     </>
   )

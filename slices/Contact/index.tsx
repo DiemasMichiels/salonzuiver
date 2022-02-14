@@ -52,7 +52,7 @@ const Contact = ({ slice }: Props) => (
               href={
                 ['phone', 'whatsapp'].includes(item.icon)
                   ? `tel:${item.text.replace(/\s/g, '')}`
-                  : item.text
+                  : `mailto:${item.text.replace(/\s/g, '')}`
               }
             >
               {item.text}

@@ -4,7 +4,7 @@ export const HoursSection = styled.section`
   flex-grow: 1;
 
   @media (min-width: 992px) {
-    flex-grow: initial;
+    flex-grow: 0.5;
   }
 
   h2 {
