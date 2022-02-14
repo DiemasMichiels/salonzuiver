@@ -153,7 +153,7 @@ export const MenuItems = styled.ul<{ isMenuOpen?: boolean }>`
   margin: 0;
   padding: 0;
   transition: transform 0.3s ease-in;
-  transform: translateY(${({ isMenuOpen }) => (isMenuOpen ? '0%' : '100%')});
+  transform: translateY(${({ isMenuOpen }) => (isMenuOpen ? '0%' : '200%')});
   list-style-type: none;
   background-color: ${({ theme }) => theme.colors.green08};
 

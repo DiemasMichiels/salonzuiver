@@ -12,7 +12,7 @@ const Footer = ({ footer, isHome = false }: Props) => {
   return (
     <styled.Footer isHome={isHome}>
       <p>Schoonheidssalon Zuiver © {new Date().getFullYear()}</p>
-      <RichText render={footer.data.text} />
+      <RichText render={footer?.data.text} />
     </styled.Footer>
   )
 }
