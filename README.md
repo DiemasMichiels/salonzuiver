@@ -30,7 +30,7 @@ Open [http://localhost:9999](http://localhost:9999) to see the slicemachine inte
 
 BSD 3-Clause License
 
-Copyright (c) 2021, Vulpen
+Copyright (c) 2021, Diemas
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
