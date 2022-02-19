@@ -47,7 +47,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       footer,
       statics,
     },
-    revalidate: 600,
+    // revalidate: 600,
   }
 }
 
