@@ -1,4 +1,5 @@
 import { default as NextLink } from 'next/link'
+import { useRouter } from 'next/router'
 import { linkResolver } from '@utils/prismic/routes'
 import type {
   FilledLinkToDocumentField,
@@ -16,6 +17,8 @@ type Props = {
 }
 
 const Link = ({ href, children, target, onClick, className }: Props) => {
+  const router = useRouter()
+
   let actualHref = '#'
   let actualTarget = target
 
@@ -25,14 +28,20 @@ const Link = ({ href, children, target, onClick, className }: Props) => {
     actualHref = linkResolver(href as FilledLinkToDocumentField)
   } else if ((href as FilledLinkToWebField).url !== undefined) {
     actualHref = (href as FilledLinkToWebField).url
-    actualTarget = (href as FilledLinkToWebField).target
+    actualTarget =
+      (href as FilledLinkToWebField).target ??
+      ((href as FilledLinkToWebField).url.includes('http')
+        ? '_blank'
+        : undefined)
   }
 
   return (
     <NextLink href={actualHref}>
       <a
         onClick={onClick}
-        className={className}
+        className={`${router.asPath === actualHref ? 'active' : ''} ${
+          className ?? ''
+        }`}
         target={actualTarget}
         rel={actualTarget === '_blank' ? 'noreferrer noopener' : undefined}
       >

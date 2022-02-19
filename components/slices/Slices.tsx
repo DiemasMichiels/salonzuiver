@@ -1,4 +1,4 @@
-import { Hero, Prices, Product, Notice } from '@slices'
+import { Hero, Prices, Product, Notice, Information, Terms } from '@slices'
 import { PRISMIC_SLICES } from '@utils/prismic/constants'
 import Grid from '@components/grid/Grid'
 import type SliceTypes from '@slices/sliceTypes'
@@ -16,6 +16,10 @@ const Slices = ({ slices, statics }: Props) => {
     switch (slice.slice_type) {
       case PRISMIC_SLICES.HERO:
         return <Hero key={`${slice}-${i}`} slice={slice} />
+      case PRISMIC_SLICES.INFORMATION:
+        return <Information key={`${slice}-${i}`} slice={slice} />
+      case PRISMIC_SLICES.TERMS:
+        return <Terms key={`${slice}-${i}`} slice={slice} />
       case PRISMIC_SLICES.PRICES:
         return (
           <Prices

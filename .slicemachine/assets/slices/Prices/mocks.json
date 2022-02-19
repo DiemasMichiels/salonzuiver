@@ -7,37 +7,30 @@
       {
         "products": {
           "link_type": "Web",
-          "url": "https://prismic.io"
+          "url": "http://twitter.com"
         },
-        "position": "right"
+        "position": "auto"
       },
       {
         "products": {
           "link_type": "Web",
           "url": "http://twitter.com"
         },
-        "position": "left"
-      },
-      {
-        "products": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        },
-        "position": "right"
+        "position": "auto"
       },
       {
         "products": {
           "link_type": "Web",
           "url": "http://google.com"
         },
-        "position": "left"
+        "position": "auto"
       }
     ],
     "primary": {
       "title": [
         {
           "type": "heading2",
-          "text": "Disintermediate bricks-and-clicks niches",
+          "text": "Harness cutting-edge e-commerce",
           "spans": []
         }
       ]

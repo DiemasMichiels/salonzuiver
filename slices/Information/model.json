@@ -1,0 +1,66 @@
+{
+  "id": "information",
+  "type": "SharedSlice",
+  "name": "Information",
+  "description": "Information",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Information",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          }
+        }
+      },
+      "items": {
+        "subtitle": {
+          "config": {
+            "label": "Subtitle",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading3"
+          },
+          "type": "StructuredText"
+        },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,em,hyperlink,strong"
+          },
+          "type": "StructuredText"
+        },
+        "image": {
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
+        },
+        "imagePosition": {
+          "config": {
+            "label": "Image position",
+            "placeholder": "",
+            "options": [
+              "right",
+              "left"
+            ],
+            "default_value": "right"
+          },
+          "type": "Select"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "terms",
+  "type": "SharedSlice",
+  "name": "Terms",
+  "description": "Terms",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Terms",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "This is where it all begins...",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          }
+        }
+      },
+      "items": {
+        "subtitle": {
+          "config": {
+            "label": "Subtitle",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          },
+          "type": "StructuredText"
+        },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,em,strong,hyperlink"
+          },
+          "type": "StructuredText"
+        }
+      }
+    }
+  ]
+}

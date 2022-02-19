@@ -26,40 +26,47 @@ type Props = {
   slice: ContactSlice
 }
 
-const getIcon = (icon: 'mail' | 'phone' | 'whatsapp') => {
-  switch (icon) {
-    case 'mail':
-      return <MailIcon />
-    case 'phone':
-      return <PhoneIcon />
-    case 'whatsapp':
-      return <WhatsappIcon />
+const getIconAndHref = (item: {
+  icon: SelectField<'mail' | 'phone' | 'whatsapp'>
+  text: KeyTextField
+}) => {
+  let IconComp: JSX.Element | null = null
+  let href: string | null = null
 
-    default:
-      return null
+  const textWithoutSpaces = (item.text ?? '').replace(/\s/g, '')
+
+  switch (item.icon) {
+    case 'mail':
+      IconComp = <MailIcon />
+      href = `mailto:${textWithoutSpaces}`
+      break
+    case 'phone':
+      IconComp = <PhoneIcon />
+      href = `tel:${textWithoutSpaces}`
+      break
+    case 'whatsapp':
+      IconComp = <WhatsappIcon />
+      href = `https://wa.me/${textWithoutSpaces}`
+      break
   }
+
+  return { IconComp, href }
 }
 
 const Contact = ({ slice }: Props) => (
   <styled.ContactSection>
     <RichText render={slice.primary.title} />
     <styled.Address>
-      {slice.items.map((item) =>
-        item.text && item.icon ? (
+      {slice.items.map((item) => {
+        const { IconComp, href } = getIconAndHref(item)
+
+        return href && !!IconComp ? (
           <div key={`${item.text}-${item.icon}`}>
-            {getIcon(item.icon)}
-            <a
-              href={
-                ['phone', 'whatsapp'].includes(item.icon)
-                  ? `tel:${item.text.replace(/\s/g, '')}`
-                  : `mailto:${item.text.replace(/\s/g, '')}`
-              }
-            >
-              {item.text}
-            </a>
+            {IconComp}
+            <a href={href}>{item.text}</a>
           </div>
-        ) : null,
-      )}
+        ) : null
+      })}
     </styled.Address>
   </styled.ContactSection>
 )

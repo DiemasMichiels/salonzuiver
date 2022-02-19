@@ -15,4 +15,6 @@ export enum PRISMIC_SLICES {
   NOTICE = 'notice',
   PRICES = 'prices',
   PRODUCT = 'product',
+  INFORMATION = 'information',
+  TERMS = 'terms',
 }

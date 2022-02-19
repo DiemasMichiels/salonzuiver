@@ -209,6 +209,10 @@ export const MenuItems = styled.ul<{ isMenuOpen?: boolean }>`
       color: ${({ theme }) => theme.colors.green08};
 
       ${LinkHoverStyleTB}
+
+      &.active {
+        color: ${({ theme }) => theme.colors.green36};
+      }
     }
   }
 `

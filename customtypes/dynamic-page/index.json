@@ -41,6 +41,12 @@
             },
             "notice": {
               "type": "SharedSlice"
+            },
+            "information": {
+              "type": "SharedSlice"
+            },
+            "terms": {
+              "type": "SharedSlice"
             }
           }
         }

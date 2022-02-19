@@ -6,26 +6,30 @@
     "items": [
       {
         "icon": "mail",
-        "text": "unleash enterprise networks"
+        "text": "grow cross-platform systems"
+      },
+      {
+        "icon": "whatsapp",
+        "text": "aggregate enterprise initiatives"
       },
       {
         "icon": "phone",
-        "text": "reinvent sexy e-business"
+        "text": "matrix one-to-one web-readiness"
       },
       {
         "icon": "mail",
-        "text": "utilize cross-platform models"
+        "text": "synergize global users"
       },
       {
         "icon": "mail",
-        "text": "empower seamless niches"
+        "text": "monetize collaborative methodologies"
       }
     ],
     "primary": {
       "title": [
         {
           "type": "heading2",
-          "text": "Facilitate mission-critical networks",
+          "text": "Maximize dynamic bandwidth",
           "spans": []
         }
       ]
