@@ -54,7 +54,7 @@ export const LinkHoverStyleLR = css`
       ${({ theme }) => theme.colors.green48p32} 50%
     )
     right;
-  background-size: 201%;
+  background-size: 205%;
   transition: 0.25s ease-in-out;
 
   &:hover {
@@ -69,7 +69,7 @@ export const LinkHoverStyleRL = css`
       transparent 50%
     )
     left;
-  background-size: 201%;
+  background-size: 205%;
   transition: 0.25s ease-in-out;
 
   &:hover {
@@ -84,7 +84,7 @@ export const LinkHoverStyleTB = css`
       ${({ theme }) => theme.colors.green48p32} 50%
     )
     bottom;
-  background-size: 100% 201%;
+  background-size: 100% 205%;
   transition: 0.25s ease-in-out;
 
   &:hover {

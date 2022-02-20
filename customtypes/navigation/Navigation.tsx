@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useWindowScroll, useViewportSize } from '@mantine/hooks'
+import { useWindowScroll, useViewportSize, useScrollLock } from '@mantine/hooks'
 import { useState } from 'react'
 import Link from '@components/general/Link/Link'
 import FacebookIcon from '@assets/icons/facebook.svg'
@@ -20,6 +20,8 @@ type Props = {
 const Navigation = ({ navigation, isHome = false }: Props) => {
   const { logo, socialItems, menuText, menuItems } = navigation.data
 
+  const [, setScrollLocked] = useScrollLock()
+
   const bodyScrollHeight =
     typeof window !== 'undefined'
       ? window.document.body.scrollHeight
@@ -37,7 +39,13 @@ const Navigation = ({ navigation, isHome = false }: Props) => {
     <styled.MenuItems isMenuOpen={isMenuOpen}>
       {menuItems.map((item, index) => (
         <li key={index}>
-          <Link href={item.link} onClick={() => setIsMenuOpen(false)}>
+          <Link
+            href={item.link}
+            onClick={() => {
+              setScrollLocked(false)
+              setIsMenuOpen(false)
+            }}
+          >
             {item.title}
           </Link>
         </li>
@@ -77,7 +85,12 @@ const Navigation = ({ navigation, isHome = false }: Props) => {
           ))}
         </styled.SocialItems>
         {isMobile && (
-          <styled.MenuButton onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <styled.MenuButton
+            onClick={() => {
+              setScrollLocked(!isMenuOpen)
+              setIsMenuOpen(!isMenuOpen)
+            }}
+          >
             {isMenuOpen ? <CloseIcon /> : menuText}
           </styled.MenuButton>
         )}

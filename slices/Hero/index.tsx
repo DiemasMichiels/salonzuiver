@@ -1,4 +1,4 @@
-import { useScrollIntoView } from '@mantine/hooks'
+import { useScrollIntoView, useViewportSize } from '@mantine/hooks'
 import { useEffect } from 'react'
 import Button from '@components/general/button/Button'
 import RichText from '@components/prismic/RichText'
@@ -12,6 +12,8 @@ import type {
   RichTextField,
   Slice,
 } from '@prismicio/types'
+
+const MOBILE_MENU_MAX_WIDTH = 768
 
 export type HeroSlice = Slice<
   PRISMIC_SLICES.HERO,
@@ -30,8 +32,10 @@ type Props = {
 const Hero = ({ slice }: Props) => {
   const { title, description, image, cta } = slice.primary
 
+  const { width } = useViewportSize()
+  const isMobile = width < MOBILE_MENU_MAX_WIDTH
   const { scrollIntoView, targetRef } = useScrollIntoView({
-    offset: 120,
+    offset: isMobile ? 40 : 100,
   })
 
   useEffect(() => {
