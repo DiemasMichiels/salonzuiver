@@ -4,6 +4,10 @@ import { ContainerStyle } from '@components/general/styled'
 export const Section = styled.section`
   ${ContainerStyle}
 
+  @media (min-width: 1200px) {
+    max-width: 960px;
+  }
+
   h2 {
     padding: 40px 0 40px 0;
   }

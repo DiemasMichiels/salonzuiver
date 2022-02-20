@@ -67,7 +67,7 @@ const App = ({
           />
         )}
         <Component {...pageProps} />
-        <Footer isHome={router.pathname === '/'} footer={pageProps.footer} />
+        <Footer footer={pageProps.footer} />
       </ThemeProvider>
     </>
   )

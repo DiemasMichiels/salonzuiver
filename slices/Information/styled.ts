@@ -48,11 +48,20 @@ export const ImageContainer = styled.div`
   max-width: 430px;
   height: 300px;
 
+  @media not all and (min-resolution: 0.001dpcm) {
+    @media {
+      margin-top: -60px;
+      margin-bottom: 60px;
+    }
+  }
+
   @media (min-width: 992px) {
     align-self: auto;
     width: initial;
     height: initial;
     max-width: initial;
     min-height: 240px;
+    margin-top: initial;
+    margin-bottom: initial;
   }
 `

@@ -7,12 +7,11 @@ import type { Elements } from 'prismic-reactjs'
 
 type Props = {
   footer: Document<FooterData>
-  isHome?: boolean
 }
 
-const Footer = ({ footer, isHome = false }: Props) => {
+const Footer = ({ footer }: Props) => {
   return (
-    <styled.Footer isHome={isHome}>
+    <styled.Footer>
       <RichText
         render={footer?.data.text}
         htmlSerializer={(type: Elements, _, content: string) => {
@@ -24,7 +23,7 @@ const Footer = ({ footer, isHome = false }: Props) => {
         }}
       />
       <p>
-        Made by{' '}
+        Made by
         <Link href='https://diemas.dev' target='_blank'>
           Diemas
         </Link>

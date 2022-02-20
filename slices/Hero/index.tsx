@@ -31,7 +31,7 @@ const Hero = ({ slice }: Props) => {
   const { title, description, image, cta } = slice.primary
 
   const { scrollIntoView, targetRef } = useScrollIntoView({
-    offset: 100,
+    offset: 120,
   })
 
   useEffect(() => {

@@ -1,14 +1,13 @@
 import styled from 'styled-components'
 
-export const Footer = styled.footer<{ isHome?: boolean }>`
+export const Footer = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   column-gap: 40px;
   padding: 4px;
-  background-color: ${({ theme, isHome }) =>
-    isHome ? 'transparent' : theme.colors.brown92};
+  background-color: ${({ theme }) => theme.colors.brown92};
 
   p,
   a {
