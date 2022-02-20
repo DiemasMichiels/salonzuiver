@@ -10,7 +10,8 @@ export const Footer = styled.footer<{ isHome?: boolean }>`
   background-color: ${({ theme, isHome }) =>
     isHome ? 'transparent' : theme.colors.brown92};
 
-  p {
+  p,
+  a {
     font-weight: 300;
     font-size: 1.3rem;
     line-height: 2.4rem;
