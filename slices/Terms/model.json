@@ -27,7 +27,7 @@
             "label": "Subtitle",
             "placeholder": "",
             "allowTargetBlank": false,
-            "single": "heading2"
+            "single": "heading3"
           },
           "type": "StructuredText"
         },

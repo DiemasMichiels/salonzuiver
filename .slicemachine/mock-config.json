@@ -259,88 +259,32 @@
         }
       }
     ],
-    "Terms": [
-      {
-        "variation": "default-slice",
-        "name": "Default slice",
-        "slice_type": "terms",
-        "items": [
-          {
-            "subtitle": [
-              {
-                "type": "heading2",
-                "text": "Deliver out-of-the-box relationships",
-                "spans": []
-              }
-            ],
-            "description": [
-              {
-                "type": "paragraph",
-                "text": "Cupidatat tempor mollit ea elit officia est eiusmod dolore aliqua. Amet id quis ullamco non laborum consequat dolore dolor ea ullamco aliquip.",
-                "spans": []
-              }
-            ]
-          },
-          {
-            "subtitle": [
-              {
-                "type": "heading2",
-                "text": "Architect integrated channels",
-                "spans": []
-              }
-            ],
-            "description": [
-              {
-                "type": "paragraph",
-                "text": "Veniam adipisicing tempor sint reprehenderit fugiat adipisicing reprehenderit ipsum ut aute nulla qui.",
-                "spans": []
-              }
-            ]
-          },
-          {
-            "subtitle": [
-              {
-                "type": "heading2",
-                "text": "Drive dot-com web-readiness",
-                "spans": []
-              }
-            ],
-            "description": [
-              {
-                "type": "paragraph",
-                "text": "Cupidatat ad Lorem cillum.",
-                "spans": []
-              }
-            ]
-          },
-          {
-            "subtitle": [
-              {
-                "type": "heading2",
-                "text": "Brand cross-platform technologies",
-                "spans": []
-              }
-            ],
-            "description": [
-              {
-                "type": "paragraph",
-                "text": "Culpa qui tempor voluptate in laborum.",
-                "spans": []
-              }
-            ]
-          }
-        ],
+    "Terms": {
+      "default-slice": {
         "primary": {
-          "title": [
-            {
-              "type": "heading2",
-              "text": "Harness interactive synergies",
-              "spans": []
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
             }
-          ]
+          }
+        },
+        "items": {
+          "subtitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
         }
       }
-    ],
+    },
     "Information": {
       "default-slice": {
         "primary": {
