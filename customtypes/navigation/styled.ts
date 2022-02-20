@@ -152,11 +152,11 @@ export const MenuItems = styled.ul<{ isMenuOpen?: boolean }>`
   justify-content: center;
   gap: 80px;
   width: 100vw;
-  height: 100vh;
+  height: 150vh;
   top: 0;
   left: 0;
   margin: 0;
-  padding: 0;
+  padding: 0 0 50vh 0;
   transition: transform 0.3s ease-in;
   transform: translateY(${({ isMenuOpen }) => (isMenuOpen ? '0%' : '200%')});
   list-style-type: none;
@@ -170,6 +170,7 @@ export const MenuItems = styled.ul<{ isMenuOpen?: boolean }>`
     height: initial;
     top: initial;
     left: initial;
+    padding: 0;
     transform: initial;
     writing-mode: vertical-lr;
     background-color: initial;

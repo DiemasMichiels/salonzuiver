@@ -7,6 +7,7 @@ import * as styled from '@components/general/styled'
 import Navigation from '@customtypes/navigation/Navigation'
 import { GlobalStyle } from '@components/general/GlobalStyle'
 import Footer from '@customtypes/footer/Footer'
+import { getActiveYears } from '@utils/replacers'
 import type { Document } from '@prismicio/client/types/documents'
 import type { DynamicPageData } from '@customtypes/dynamic-page/types'
 import type { AppProps } from 'next/app'
@@ -37,9 +38,9 @@ const App = ({
       {seoTitle && (
         <NextSeo
           title={seoTitle ?? undefined}
-          description={seoDescription ?? undefined}
+          description={getActiveYears(seoDescription) ?? undefined}
           openGraph={{
-            description: seoDescription ?? undefined,
+            description: getActiveYears(seoDescription) ?? undefined,
             images: seoImage?.url
               ? [
                   {
