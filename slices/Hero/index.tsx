@@ -1,3 +1,5 @@
+import { useScrollIntoView } from '@mantine/hooks'
+import { useEffect } from 'react'
 import Button from '@components/general/button/Button'
 import RichText from '@components/prismic/RichText'
 import FancyImage from '@components/fancyImage/FancyImage'
@@ -28,13 +30,29 @@ type Props = {
 const Hero = ({ slice }: Props) => {
   const { title, description, image, cta } = slice.primary
 
+  const { scrollIntoView, targetRef } = useScrollIntoView({
+    offset: 100,
+  })
+
+  useEffect(() => {
+    const scrollToElement = document.getElementById('cta')
+
+    if (scrollToElement) {
+      targetRef.current = scrollToElement
+    }
+  }, [targetRef])
+
   return (
     <styled.Section>
       <styled.Content>
         {title && <RichText render={title} />}
         {description && <RichText render={description} />}
         {cta && (
-          <Button className='cta' icon={<DownCircleIcon />}>
+          <Button
+            className='cta'
+            icon={<DownCircleIcon />}
+            onClick={() => scrollIntoView()}
+          >
             {cta}
           </Button>
         )}

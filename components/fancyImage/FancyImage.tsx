@@ -3,12 +3,13 @@ import * as styled from './styled'
 import type { ImageField } from '@prismicio/types'
 
 type Props = {
+  small?: boolean
   image: ImageField
 }
 
-const FancyImage = ({ image }: Props) => {
+const FancyImage = ({ small = false, image }: Props) => {
   return image.url ? (
-    <styled.ImageContainer>
+    <styled.ImageContainer small={small}>
       <Image
         src={image.url}
         alt={image.alt ?? undefined}

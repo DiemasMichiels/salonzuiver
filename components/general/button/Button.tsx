@@ -5,11 +5,12 @@ type Props = {
   className?: string
   icon: ReactElement
   children: ReactNode
+  onClick: () => void
 }
 
-const Button = ({ className, icon, children }: Props) => {
+const Button = ({ className, icon, children, onClick }: Props) => {
   return (
-    <styled.Button className={className}>
+    <styled.Button className={className} onClick={onClick}>
       <span>{children}</span>
       {icon}
     </styled.Button>
