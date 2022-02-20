@@ -45,14 +45,19 @@ export const TopBar = styled.div<{ small?: boolean }>`
   }
 `
 
-export const SideBar = styled.div<{ isMenuOpen?: boolean; isHome?: boolean }>`
+export const SideBar = styled.div<{
+  isMenuOpen?: boolean
+  isHome?: boolean
+  bottomPaddingMobile: number
+}>`
   z-index: 8;
   position: fixed;
   display: flex;
   align-items: center;
   gap: 20px;
   height: 48px;
-  bottom: 32px;
+  bottom: ${({ bottomPaddingMobile }) =>
+    `calc(24px + ${bottomPaddingMobile}px)`};
   left: 50%;
   padding: 0 24px;
   border-radius: 48px;

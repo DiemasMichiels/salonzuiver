@@ -20,9 +20,16 @@ type Props = {
 const Navigation = ({ navigation, isHome = false }: Props) => {
   const { logo, socialItems, menuText, menuItems } = navigation.data
 
+  const bodyScrollHeight =
+    typeof window !== 'undefined'
+      ? window.document.body.scrollHeight
+      : undefined
   const [scroll] = useWindowScroll()
-  const { width } = useViewportSize()
+  const { width, height } = useViewportSize()
   const isMobile = width < MOBILE_MENU_MAX_WIDTH
+  const bottomPaddingMobile = bodyScrollHeight
+    ? scroll.y - (bodyScrollHeight - height) + 64
+    : 0
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
@@ -54,7 +61,11 @@ const Navigation = ({ navigation, isHome = false }: Props) => {
           )}
         </Link>
       </styled.TopBar>
-      <styled.SideBar isMenuOpen={isMenuOpen} isHome={isHome}>
+      <styled.SideBar
+        isMenuOpen={isMenuOpen}
+        isHome={isHome}
+        bottomPaddingMobile={bottomPaddingMobile <= 0 ? 0 : 40}
+      >
         <styled.SocialItems isMenuOpen={isMenuOpen}>
           {socialItems.map((item, index) => (
             <li key={index}>
