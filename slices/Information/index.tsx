@@ -37,7 +37,7 @@ const Information = ({ slice }: Props) => (
             field={item.description}
             components={(type, node, content) => {
               if (type === 'span' && content) {
-                return <p>{getActiveYears(content)}</p>
+                return <>{getActiveYears(content)}</>
               }
 
               return undefined

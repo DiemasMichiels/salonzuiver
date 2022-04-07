@@ -14,10 +14,10 @@ const Footer = ({ footer }: Props) => {
       <PrismicRichText
         field={footer?.data.text}
         components={(type, node, content) => {
-          return type === 'span' && content ? (
-            <p>
+          return type === 'span' && content?.includes('{{year}}') ? (
+            <>
               {content.replace('{{year}}', new Date().getFullYear().toString())}
-            </p>
+            </>
           ) : undefined
         }}
       />

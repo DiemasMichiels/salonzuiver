@@ -5,6 +5,7 @@ import { PrismicPreview } from '@prismicio/next'
 import { PrismicProvider } from '@prismicio/react'
 import { useEffect } from 'react'
 import AOS from 'aos'
+import PageTransition from '@components/pageTransition/PageTransition'
 import SEO from '@root/next-seo.config'
 import THEME from '@theme/theme'
 import * as styled from '@components/general/styled'
@@ -40,8 +41,6 @@ const App = ({
 
   useEffect(() => {
     AOS.init({
-      offset: 0,
-      delay: 0,
       duration: 500,
       once: true,
     })
@@ -94,8 +93,10 @@ const App = ({
                 navigation={pageProps.navigation}
               />
             )}
-            <Component {...pageProps} />
-            <Footer footer={pageProps.footer} />
+            <PageTransition location={router.asPath}>
+              <Component {...pageProps} />
+              <Footer footer={pageProps.footer} />
+            </PageTransition>
           </ThemeProvider>
         </PrismicPreview>
       </PrismicProvider>
