@@ -47,7 +47,7 @@ const Hero = ({ slice }: Props) => {
   }, [targetRef])
 
   return (
-    <styled.Section>
+    <styled.Section data-aos='fade-up'>
       <styled.Content>
         {title && <PrismicRichText field={title} />}
         {description && <PrismicRichText field={description} />}

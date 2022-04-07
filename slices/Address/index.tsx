@@ -16,7 +16,7 @@ type Props = {
 }
 
 const Address = ({ slice }: Props) => (
-  <styled.AddressSection>
+  <styled.AddressSection data-aos='fade-up'>
     <PrismicRichText field={slice.primary.title} />
     <address>
       <PrismicRichText field={slice.primary.address} />

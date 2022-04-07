@@ -54,7 +54,7 @@ const getIconAndHref = (item: {
 }
 
 const Contact = ({ slice }: Props) => (
-  <styled.ContactSection>
+  <styled.ContactSection data-aos='fade-up'>
     <PrismicRichText field={slice.primary.title} />
     <styled.Address>
       {slice.items.map((item) => {

@@ -3,6 +3,8 @@ import { DefaultSeo, NextSeo } from 'next-seo'
 import Head from 'next/head'
 import { PrismicPreview } from '@prismicio/next'
 import { PrismicProvider } from '@prismicio/react'
+import { useEffect } from 'react'
+import AOS from 'aos'
 import SEO from '@root/next-seo.config'
 import THEME from '@theme/theme'
 import * as styled from '@components/general/styled'
@@ -19,6 +21,8 @@ import type { AppProps } from 'next/app'
 import type { NavigationData } from '@customtypes/navigation/types'
 import type { FooterData } from '@customtypes/footer/types'
 
+import 'aos/dist/aos.css'
+
 type PageProps = {
   doc: PrismicDocumentWithUID<DynamicPageData>
   navigation: PrismicDocumentWithUID<NavigationData>
@@ -33,6 +37,15 @@ const App = ({
   pageProps: PageProps
 }) => {
   const { seoTitle, seoDescription, seoImage } = pageProps.doc?.data ?? {}
+
+  useEffect(() => {
+    AOS.init({
+      offset: 0,
+      delay: 0,
+      duration: 500,
+      once: true,
+    })
+  }, [])
 
   return (
     <>
@@ -74,7 +87,7 @@ const App = ({
         <PrismicPreview repositoryName={repositoryName}>
           <ThemeProvider theme={THEME}>
             <GlobalStyle />
-            <styled.Background />
+            <styled.Background data-aos='fade' />
             {pageProps.navigation && (
               <Navigation
                 isHome={router.pathname === '/'}

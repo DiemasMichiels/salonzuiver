@@ -25,7 +25,7 @@ type Props = {
 }
 
 const Hours = ({ slice }: Props) => (
-  <styled.HoursSection>
+  <styled.HoursSection data-aos='fade-up'>
     <PrismicRichText field={slice.primary.title} />
     <styled.Table>
       <tbody>

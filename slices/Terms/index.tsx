@@ -19,7 +19,7 @@ type Props = {
 }
 
 const Terms = ({ slice }: Props) => (
-  <styled.Section id='cta'>
+  <styled.Section id='cta' data-aos='fade-up'>
     <PrismicRichText field={slice.primary.title} />
     {slice.items.map((item, i) => (
       <div key={i}>

@@ -11,7 +11,7 @@ type Props = {
 
 const Products = ({ doc }: Props) => {
   return (
-    <styled.Products>
+    <styled.Products data-aos='fade-up'>
       <PrismicRichText field={doc.data.groupTitle} />
       <styled.ProductsList>
         <Slices slices={doc.data.slices} />

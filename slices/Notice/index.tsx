@@ -16,7 +16,7 @@ type Props = {
 }
 
 const Notice = ({ slice }: Props) => (
-  <styled.NoticeSection>
+  <styled.NoticeSection data-aos='fade-up'>
     <div>
       <InfoIcon />
       <PrismicRichText field={slice.primary.text} />

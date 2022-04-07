@@ -26,7 +26,11 @@ const Information = ({ slice }: Props) => (
   <styled.Section id='cta'>
     <PrismicRichText field={slice.primary.title} />
     {slice.items.map((item, i) => (
-      <styled.InfoBlock key={i} imagePosition={item.imagePosition}>
+      <styled.InfoBlock
+        key={i}
+        imagePosition={item.imagePosition}
+        data-aos='fade-up'
+      >
         <styled.Content>
           <PrismicRichText field={item.subtitle} />
           <PrismicRichText
