@@ -1,18 +1,18 @@
-import RichText from '@components/prismic/RichText'
+import { PrismicRichText } from '@prismicio/react'
 import Slices from '@components/slices/Slices'
 import Notice from '@components/notice/Notice'
 import * as styled from './styled'
 import type { ProductsData } from './types'
-import type { Document } from '@prismicio/client/types/documents'
+import type { PrismicDocumentWithUID } from '@prismicio/types'
 
 type Props = {
-  doc: Document<ProductsData>
+  doc: PrismicDocumentWithUID<ProductsData>
 }
 
 const Products = ({ doc }: Props) => {
   return (
     <styled.Products>
-      <RichText render={doc.data.groupTitle} />
+      <PrismicRichText field={doc.data.groupTitle} />
       <styled.ProductsList>
         <Slices slices={doc.data.slices} />
       </styled.ProductsList>

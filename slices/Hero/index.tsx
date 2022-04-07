@@ -1,7 +1,7 @@
 import { useScrollIntoView, useViewportSize } from '@mantine/hooks'
 import { useEffect } from 'react'
+import { PrismicRichText } from '@prismicio/react'
 import Button from '@components/general/button/Button'
-import RichText from '@components/prismic/RichText'
 import FancyImage from '@components/fancyImage/FancyImage'
 import DownCircleIcon from '@assets/icons/downCircle.svg'
 import * as styled from './styled'
@@ -49,8 +49,8 @@ const Hero = ({ slice }: Props) => {
   return (
     <styled.Section>
       <styled.Content>
-        {title && <RichText render={title} />}
-        {description && <RichText render={description} />}
+        {title && <PrismicRichText field={title} />}
+        {description && <PrismicRichText field={description} />}
         {cta && (
           <Button
             className='cta'

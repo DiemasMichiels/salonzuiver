@@ -1,8 +1,13 @@
-import type { ImageField, KeyTextField, LinkField } from '@prismicio/types'
+import type {
+  GroupField,
+  ImageField,
+  KeyTextField,
+  LinkField,
+} from '@prismicio/types'
 
 export type NavigationData = {
   logo: ImageField
   menuText: KeyTextField
-  menuItems: { title: KeyTextField; link: LinkField }[]
-  socialItems: { social: 'instagram' | 'facebook'; link: LinkField }[]
+  menuItems: GroupField<{ title: KeyTextField; link: LinkField }>
+  socialItems: GroupField<{ social: 'instagram' | 'facebook'; link: LinkField }>
 }

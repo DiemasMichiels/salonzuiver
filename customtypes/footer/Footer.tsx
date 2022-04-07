@@ -1,25 +1,24 @@
-import RichText from '@components/prismic/RichText'
+import { PrismicRichText } from '@prismicio/react'
 import Link from '@components/general/Link/Link'
 import * as styled from './styled'
-import type { Document } from '@prismicio/client/types/documents'
+import type { PrismicDocumentWithUID } from '@prismicio/types'
 import type { FooterData } from './types'
-import type { Elements } from 'prismic-reactjs'
 
 type Props = {
-  footer: Document<FooterData>
+  footer: PrismicDocumentWithUID<FooterData>
 }
 
 const Footer = ({ footer }: Props) => {
   return (
     <styled.Footer>
-      <RichText
-        render={footer?.data.text}
-        htmlSerializer={(type: Elements, _, content: string) => {
-          return (
-            type === 'span' &&
-            content &&
-            content.replace('{{year}}', new Date().getFullYear().toString())
-          )
+      <PrismicRichText
+        field={footer?.data.text}
+        components={(type, node, content) => {
+          return type === 'span' && content ? (
+            <p>
+              {content.replace('{{year}}', new Date().getFullYear().toString())}
+            </p>
+          ) : undefined
         }}
       />
       <p>

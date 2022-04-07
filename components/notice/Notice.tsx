@@ -1,4 +1,4 @@
-import RichText from '@components/prismic/RichText'
+import { PrismicRichText } from '@prismicio/react'
 import InfoIcon from '@assets/icons/info.svg'
 import * as styled from './styled'
 import type { RichTextField } from '@prismicio/types'
@@ -11,7 +11,7 @@ const Notice = ({ notice }: Props) => {
   return notice.length ? (
     <styled.Notice>
       <InfoIcon />
-      <RichText render={notice} />
+      <PrismicRichText field={notice} />
     </styled.Notice>
   ) : null
 }

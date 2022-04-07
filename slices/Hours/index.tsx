@@ -1,4 +1,4 @@
-import RichText from '@components/prismic/RichText'
+import { PrismicRichText } from '@prismicio/react'
 import * as styled from './styled'
 import type { PRISMIC_SLICES } from '@utils/prismic/constants'
 import type {
@@ -26,7 +26,7 @@ type Props = {
 
 const Hours = ({ slice }: Props) => (
   <styled.HoursSection>
-    <RichText render={slice.primary.title} />
+    <PrismicRichText field={slice.primary.title} />
     <styled.Table>
       <tbody>
         {slice.items.map((item) => (

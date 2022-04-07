@@ -1,4 +1,4 @@
-import RichText from '@components/prismic/RichText'
+import { PrismicRichText } from '@prismicio/react'
 import * as styled from './styled'
 import type { Slice, RichTextField } from '@prismicio/types'
 import type { PRISMIC_SLICES } from '@utils/prismic/constants'
@@ -17,9 +17,9 @@ type Props = {
 
 const Address = ({ slice }: Props) => (
   <styled.AddressSection>
-    <RichText render={slice.primary.title} />
+    <PrismicRichText field={slice.primary.title} />
     <address>
-      <RichText render={slice.primary.address} />
+      <PrismicRichText field={slice.primary.address} />
     </address>
   </styled.AddressSection>
 )

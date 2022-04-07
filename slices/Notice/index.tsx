@@ -1,4 +1,4 @@
-import RichText from '@components/prismic/RichText'
+import { PrismicRichText } from '@prismicio/react'
 import InfoIcon from '@assets/icons/info.svg'
 import * as styled from './styled'
 import type { PRISMIC_SLICES } from '@utils/prismic/constants'
@@ -19,7 +19,7 @@ const Notice = ({ slice }: Props) => (
   <styled.NoticeSection>
     <div>
       <InfoIcon />
-      <RichText render={slice.primary.text} />
+      <PrismicRichText field={slice.primary.text} />
     </div>
   </styled.NoticeSection>
 )
