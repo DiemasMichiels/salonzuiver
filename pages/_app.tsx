@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components'
 import { DefaultSeo, NextSeo } from 'next-seo'
+import { RouterScrollProvider } from '@moxy/next-router-scroll'
 import Head from 'next/head'
 import { PrismicPreview } from '@prismicio/next'
 import { PrismicProvider } from '@prismicio/react'
@@ -43,6 +44,7 @@ const App = ({
     AOS.init({
       duration: 500,
       once: true,
+      easing: 'ease-out',
     })
   }, [])
 
@@ -84,20 +86,22 @@ const App = ({
         )}
       >
         <PrismicPreview repositoryName={repositoryName}>
-          <ThemeProvider theme={THEME}>
-            <GlobalStyle />
-            <styled.Background data-aos='fade' />
-            {pageProps.navigation && (
-              <Navigation
-                isHome={router.pathname === '/'}
-                navigation={pageProps.navigation}
-              />
-            )}
-            <PageTransition location={router.asPath}>
-              <Component {...pageProps} />
-              <Footer footer={pageProps.footer} />
-            </PageTransition>
-          </ThemeProvider>
+          <RouterScrollProvider>
+            <ThemeProvider theme={THEME}>
+              <GlobalStyle />
+              {pageProps.navigation && (
+                <Navigation
+                  isHome={router.pathname === '/'}
+                  navigation={pageProps.navigation}
+                />
+              )}
+              <PageTransition>
+                <styled.Background data-aos='fade' />
+                <Component {...pageProps} />
+                <Footer footer={pageProps.footer} />
+              </PageTransition>
+            </ThemeProvider>
+          </RouterScrollProvider>
         </PrismicPreview>
       </PrismicProvider>
     </>

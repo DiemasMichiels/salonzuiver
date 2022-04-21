@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@mantine/hooks": "^3.6.7",
+    "@moxy/next-router-scroll": "^2.2.0",
     "@prismicio/client": "6.4.1",
     "@prismicio/next": "^0.1.2",
     "@prismicio/react": "^2.2.0",
@@ -30,6 +31,7 @@
     "@prismicio/types": "^0.1.27",
     "@svgr/webpack": "^6.1.2",
     "@types/aos": "^3.0.4",
+    "@types/moxy__next-router-scroll": "^2.2.3",
     "@types/node": "17.0.23",
     "@types/react": "17.0.43",
     "@types/react-transition-group": "^4.4.4",
