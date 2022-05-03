@@ -12,19 +12,3 @@ export const linkResolver = (doc: FilledLinkToDocumentField) => {
 
   return '/'
 }
-
-export type Route = {
-  type: string
-  path: string
-}
-
-export type RouteResolver = { routes: Route[] }
-
-export const routeResolver = {
-  routes: [
-    {
-      type: PRISMIC_TYPES.DYNAMIC_PAGE,
-      path: '/:uid',
-    },
-  ],
-}

@@ -1,7 +1,7 @@
+import { PrismicRichText } from '@prismicio/react'
 import MailIcon from '@assets/icons/mail.svg'
 import PhoneIcon from '@assets/icons/phone.svg'
 import WhatsappIcon from '@assets/icons/whatsapp.svg'
-import RichText from '@components/prismic/RichText'
 import * as styled from './styled'
 import type { PRISMIC_SLICES } from '@utils/prismic/constants'
 import type {
@@ -54,8 +54,8 @@ const getIconAndHref = (item: {
 }
 
 const Contact = ({ slice }: Props) => (
-  <styled.ContactSection>
-    <RichText render={slice.primary.title} />
+  <styled.ContactSection data-aos='fade-up'>
+    <PrismicRichText field={slice.primary.title} />
     <styled.Address>
       {slice.items.map((item) => {
         const { IconComp, href } = getIconAndHref(item)

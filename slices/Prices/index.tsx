@@ -1,4 +1,4 @@
-import RichText from '@components/prismic/RichText'
+import { PrismicRichText } from '@prismicio/react'
 import Products from '@customtypes/products/Products'
 import * as styled from './styled'
 import type { PRISMIC_SLICES } from '@utils/prismic/constants'
@@ -29,7 +29,7 @@ type Props = {
 const Prices = ({ slice, products }: Props) => {
   return (
     <styled.Section>
-      <RichText render={slice.primary.title} />
+      <PrismicRichText field={slice.primary.title} />
       <styled.Grid>
         <div>
           {products &&

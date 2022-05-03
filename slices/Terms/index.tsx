@@ -1,4 +1,4 @@
-import RichText from '@components/prismic/RichText'
+import { PrismicRichText } from '@prismicio/react'
 import * as styled from './styled'
 import type { Slice, RichTextField } from '@prismicio/types'
 import type { PRISMIC_SLICES } from '@utils/prismic/constants'
@@ -19,12 +19,12 @@ type Props = {
 }
 
 const Terms = ({ slice }: Props) => (
-  <styled.Section id='cta'>
-    <RichText render={slice.primary.title} />
+  <styled.Section id='cta' data-aos='fade-up'>
+    <PrismicRichText field={slice.primary.title} />
     {slice.items.map((item, i) => (
       <div key={i}>
-        <RichText render={item.subtitle} />
-        <RichText render={item.description} />
+        <PrismicRichText field={item.subtitle} />
+        <PrismicRichText field={item.description} />
       </div>
     ))}
   </styled.Section>

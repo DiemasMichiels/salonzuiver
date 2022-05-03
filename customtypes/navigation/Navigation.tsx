@@ -7,13 +7,13 @@ import InstagramIcon from '@assets/icons/instagram.svg'
 import CloseIcon from '@assets/icons/close.svg'
 import * as styled from './styled'
 import type { NavigationData } from '@customtypes/navigation/types'
-import type { Document } from '@prismicio/client/types/documents'
+import type { PrismicDocumentWithUID } from '@prismicio/types'
 
 const SMALL_TOP_BAR_AFTER_X_PX = 60
 const MOBILE_MENU_MAX_WIDTH = 768
 
 type Props = {
-  navigation: Document<NavigationData>
+  navigation: PrismicDocumentWithUID<NavigationData>
   isHome?: boolean
 }
 

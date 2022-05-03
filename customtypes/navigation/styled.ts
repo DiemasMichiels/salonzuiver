@@ -20,6 +20,10 @@ export const TopBar = styled.div<{ small?: boolean }>`
       backdrop-filter: blur(2rem) opacity(1);
     `}
 
+  @media (min-width: 1600px) {
+    backdrop-filter: initial;
+  }
+
   @media (min-width: 768px) {
     right: ${({ theme }) => theme.sizes.sideBarWidth};
     padding: 40px;

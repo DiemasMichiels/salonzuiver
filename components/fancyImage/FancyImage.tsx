@@ -9,7 +9,7 @@ type Props = {
 
 const FancyImage = ({ small = false, image }: Props) => {
   return image.url ? (
-    <styled.ImageContainer small={small}>
+    <styled.ImageContainer small={small} data-aos='show-box'>
       <Image
         src={image.url}
         alt={image.alt ?? undefined}
