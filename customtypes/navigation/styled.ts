@@ -180,7 +180,7 @@ export const MenuItems = styled.ul<{ isMenuOpen?: boolean }>`
     background-color: initial;
   }
 
-  * + * {
+  * + *:not(:last-child) {
     position: relative;
 
     &::after {
@@ -222,6 +222,39 @@ export const MenuItems = styled.ul<{ isMenuOpen?: boolean }>`
 
       &.active {
         color: ${({ theme }) => theme.colors.green36};
+      }
+    }
+  }
+
+  button {
+    padding: 8px 16px;
+    background-color: ${({ theme }) => theme.colors.green48p32};
+
+    &:hover {
+      background-color: rgba(155, 220, 24, 0.22);
+    }
+
+    @media (min-width: 768px) {
+      padding: 16px 8px;
+    }
+
+    p {
+      font-family: ${({ theme }) => theme.fonts.title};
+      font-size: 3.2rem;
+      line-height: 1.3em;
+      font-weight: 600;
+      color: ${({ theme }) => theme.colors.brown92};
+      background: initial;
+
+      @media (min-width: 768px) {
+        font-family: ${({ theme }) => theme.fonts.brand};
+        padding: 0.4rem 0;
+        font-size: 1.6rem;
+        line-height: 1.5em;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: ${({ theme }) => theme.colors.green08};
+        writing-mode: vertical-lr;
       }
     }
   }

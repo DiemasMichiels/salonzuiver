@@ -6,6 +6,7 @@ import { PrismicPreview } from '@prismicio/next'
 import { PrismicProvider } from '@prismicio/react'
 import { useEffect } from 'react'
 import AOS from 'aos'
+import Script from 'next/script'
 import PageTransition from '@components/pageTransition/PageTransition'
 import SEO from '@root/next-seo.config'
 import THEME from '@theme/theme'
@@ -53,6 +54,7 @@ const App = ({
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
+      <Script src='https://static-widget.salonized.com/loader.js' />
       <DefaultSeo {...SEO} />
       {seoTitle && (
         <NextSeo

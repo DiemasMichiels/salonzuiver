@@ -25,7 +25,6 @@
       "menuItems": {
         "config": {
           "label": "Menu items",
-          "placeholder": "",
           "fields": {
             "title": {
               "config": {
@@ -38,7 +37,8 @@
               "config": {
                 "label": "Link",
                 "placeholder": "",
-                "allowTargetBlank": false
+                "allowTargetBlank": false,
+                "select": null
               },
               "type": "Link"
             }
@@ -49,7 +49,6 @@
       "socialItems": {
         "config": {
           "label": "Social items",
-          "placeholder": "",
           "fields": {
             "social": {
               "config": {
@@ -67,13 +66,21 @@
               "config": {
                 "label": "Link",
                 "placeholder": "",
-                "allowTargetBlank": true
+                "allowTargetBlank": true,
+                "select": null
               },
               "type": "Link"
             }
           }
         },
         "type": "Group"
+      },
+      "salonizedButtonTitle": {
+        "type": "Text",
+        "config": {
+          "label": "Salonized Button Title",
+          "placeholder": ""
+        }
       }
     }
   }
