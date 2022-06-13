@@ -1,6 +1,6 @@
 {
-  "id": "1f1b0157-7431-4560-bc68-c80fbeb68f2d",
-  "uid": "provident-impedit-quasi",
+  "id": "fcf2a88c-581b-4ab6-b672-9eb1a390c656",
+  "uid": "sed-repudiandae-consectetur",
   "type": "navigation",
   "data": {
     "logo": {
@@ -10,36 +10,30 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=null&fit=crop"
+      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=null&fit=crop"
     },
-    "menuText": "generate virtual e-tailers",
+    "menuText": "iterate compelling networks",
+    "salonizedButtonTitle": "optimize front-end channels",
     "menuItems": [
       {
-        "title": "recontextualize dot-com eyeballs",
-        "link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      {
-        "title": "unleash 24/365 technologies",
-        "link": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        }
-      },
-      {
-        "title": "synthesize proactive infomediaries",
+        "title": "brand 24/7 eyeballs",
         "link": {
           "link_type": "Web",
           "url": "https://prismic.io"
         }
       },
       {
-        "title": "scale ubiquitous systems",
+        "title": "repurpose robust mindshare",
         "link": {
           "link_type": "Web",
           "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "title": "synergize customized e-markets",
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
         }
       }
     ],
@@ -55,14 +49,14 @@
         "social": "instagram",
         "link": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "https://prismic.io"
         }
       },
       {
         "social": "instagram",
         "link": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "http://twitter.com"
         }
       }
     ]

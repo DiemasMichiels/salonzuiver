@@ -10,4 +10,6 @@ export type NavigationData = {
   menuText: KeyTextField
   menuItems: GroupField<{ title: KeyTextField; link: LinkField }>
   socialItems: GroupField<{ social: 'instagram' | 'facebook'; link: LinkField }>
+  salonizedCompany: KeyTextField
+  salonizedButtonTitle: KeyTextField
 }
