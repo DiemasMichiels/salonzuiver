@@ -36,6 +36,10 @@ export const Salonized = styled.div<{ isVisible?: boolean }>`
       @media (min-width: 768px) {
         transform: translateY(67px);
       }
+
+      iframe {
+        display: none;
+      }
     `}
 
   button {
