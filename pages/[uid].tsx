@@ -66,7 +66,7 @@ export const getStaticProps: GetStaticProps = async ({
       {},
     )
 
-    statics = await getStaticsForSlices(doc.data.slices)
+    statics = await getStaticsForSlices(client, doc.data.slices)
   } catch (error) {}
 
   return {

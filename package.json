@@ -13,9 +13,9 @@
   "dependencies": {
     "@mantine/hooks": "^3.6.7",
     "@moxy/next-router-scroll": "^2.2.0",
-    "@prismicio/client": "6.4.1",
-    "@prismicio/next": "^0.1.2",
-    "@prismicio/react": "^2.2.0",
+    "@prismicio/client": "6.7.1",
+    "@prismicio/next": "^0.1.7",
+    "@prismicio/react": "^2.5.0",
     "@prismicio/slice-simulator-react": "^0.2.0",
     "aos": "^2.3.4",
     "next": "12.1.4",
