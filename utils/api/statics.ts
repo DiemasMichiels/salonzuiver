@@ -1,15 +1,15 @@
-import Client from '@utils/prismic/client'
 import { PRISMIC_SLICES } from '@utils/prismic/constants'
 import type { PricesSlice } from '@slices/Prices'
 import type { ProductsData } from '@customtypes/products/types'
 import type SliceTypes from '@slices/sliceTypes'
 import type { PrismicDocumentWithUID } from '@prismicio/types'
+import type { Client } from '@prismicio/client'
 
 export type Statics = {
   products: Record<string, PrismicDocumentWithUID<ProductsData>> | null
 }
 
-const getPrices = async (slices: SliceTypes[]) => {
+const getPrices = async (client: Client, slices: SliceTypes[]) => {
   const priceSlices = slices.filter(
     (slice) => slice.slice_type === PRISMIC_SLICES.PRICES,
   ) as PricesSlice[]
@@ -20,7 +20,7 @@ const getPrices = async (slices: SliceTypes[]) => {
       return [...acc, ...ids]
     }, [])
 
-    const productResult = await Client().getByIDs<
+    const productResult = await client.getByIDs<
       PrismicDocumentWithUID<ProductsData>
     >(productIds, {
       pageSize: 100,
@@ -40,9 +40,10 @@ const getPrices = async (slices: SliceTypes[]) => {
 }
 
 export const getStaticsForSlices = async (
+  client: Client,
   slices: SliceTypes[],
 ): Promise<Statics> => {
-  const products = await getPrices(slices)
+  const products = await getPrices(client, slices)
 
   return { products: products ?? null }
 }
