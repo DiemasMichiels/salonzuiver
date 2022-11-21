@@ -1,6 +1,6 @@
 {
-  "id": "fcf2a88c-581b-4ab6-b672-9eb1a390c656",
-  "uid": "sed-repudiandae-consectetur",
+  "id": "812972b3-d17c-408a-8912-18e4d9b486a2",
+  "uid": "et-iusto-omnis",
   "type": "navigation",
   "data": {
     "logo": {
@@ -10,30 +10,45 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=null&fit=crop"
+      "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6?w=900&h=null&fit=crop"
     },
-    "menuText": "iterate compelling networks",
-    "salonizedButtonTitle": "optimize front-end channels",
+    "menuText": "visualize granular supply-chains",
+    "salonizedButtonTitle": "grow seamless applications",
+    "salonizedVoucherButtonTitle": "whiteboard intuitive e-markets",
     "menuItems": [
       {
-        "title": "brand 24/7 eyeballs",
+        "title": "aggregate user-centric deliverables",
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "title": "engineer open-source web-readiness",
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "title": "synthesize web-enabled solutions",
         "link": {
           "link_type": "Web",
           "url": "https://prismic.io"
         }
       },
       {
-        "title": "repurpose robust mindshare",
-        "link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
-      },
-      {
-        "title": "synergize customized e-markets",
+        "title": "e-enable back-end bandwidth",
         "link": {
           "link_type": "Web",
           "url": "http://twitter.com"
+        }
+      },
+      {
+        "title": "utilize distributed e-tailers",
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
         }
       }
     ],
@@ -42,11 +57,11 @@
         "social": "instagram",
         "link": {
           "link_type": "Web",
-          "url": "https://prismic.io"
+          "url": "https://slicemachine.dev"
         }
       },
       {
-        "social": "instagram",
+        "social": "facebook",
         "link": {
           "link_type": "Web",
           "url": "https://prismic.io"
@@ -56,7 +71,7 @@
         "social": "instagram",
         "link": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "https://prismic.io"
         }
       }
     ]

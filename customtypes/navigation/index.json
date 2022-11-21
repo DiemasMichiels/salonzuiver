@@ -81,6 +81,13 @@
           "label": "Salonized Button Title",
           "placeholder": ""
         }
+      },
+      "salonizedVoucherButtonTitle": {
+        "config": {
+          "label": "Salonized Voucher Button Title",
+          "placeholder": ""
+        },
+        "type": "Text"
       }
     }
   }

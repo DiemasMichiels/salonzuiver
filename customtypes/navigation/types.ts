@@ -12,4 +12,5 @@ export type NavigationData = {
   socialItems: GroupField<{ social: 'instagram' | 'facebook'; link: LinkField }>
   salonizedCompany: KeyTextField
   salonizedButtonTitle: KeyTextField
+  salonizedVoucherButtonTitle: KeyTextField
 }
