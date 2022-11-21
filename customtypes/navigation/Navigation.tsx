@@ -5,7 +5,8 @@ import Link from '@components/general/Link/Link'
 import FacebookIcon from '@assets/icons/facebook.svg'
 import InstagramIcon from '@assets/icons/instagram.svg'
 import CloseIcon from '@assets/icons/close.svg'
-import Salonized from '@components/salonized/Salonized'
+import GiftIcon from '@assets/icons/gift.svg'
+import Salonized, { SalonizedVoucher } from '@components/salonized/Salonized'
 import * as styled from './styled'
 import type { NavigationData } from '@customtypes/navigation/types'
 import type { PrismicDocumentWithUID } from '@prismicio/types'
@@ -19,8 +20,14 @@ type Props = {
 }
 
 const Navigation = ({ navigation, isHome = false }: Props) => {
-  const { logo, socialItems, menuText, menuItems, salonizedButtonTitle } =
-    navigation.data
+  const {
+    logo,
+    socialItems,
+    menuText,
+    menuItems,
+    salonizedButtonTitle,
+    salonizedVoucherButtonTitle,
+  } = navigation.data
 
   const [, setScrollLocked] = useScrollLock()
 
@@ -37,6 +44,7 @@ const Navigation = ({ navigation, isHome = false }: Props) => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSalonizedOpen, setIsSalonizedOpen] = useState(false)
+  const [isSalonizedVoucherOpen, setIsSalonizedVoucherOpen] = useState(false)
 
   const MenuItems = (
     <styled.MenuItems isMenuOpen={isMenuOpen}>
@@ -48,15 +56,32 @@ const Navigation = ({ navigation, isHome = false }: Props) => {
               setScrollLocked(false)
               setIsMenuOpen(false)
               setIsSalonizedOpen(false)
+              setIsSalonizedVoucherOpen(false)
             }}
           >
             {item.title}
           </Link>
         </li>
       ))}
-      <button onClick={() => setIsSalonizedOpen(!isSalonizedOpen)}>
-        <p>{salonizedButtonTitle}</p>
-      </button>
+      <div>
+        <button
+          onClick={() => {
+            setIsSalonizedOpen(false)
+            setIsSalonizedVoucherOpen(!isSalonizedVoucherOpen)
+          }}
+        >
+          <GiftIcon />
+          <p>{salonizedVoucherButtonTitle}</p>
+        </button>
+        <button
+          onClick={() => {
+            setIsSalonizedVoucherOpen(false)
+            setIsSalonizedOpen(!isSalonizedOpen)
+          }}
+        >
+          <p>{salonizedButtonTitle}</p>
+        </button>
+      </div>
     </styled.MenuItems>
   )
 
@@ -65,6 +90,10 @@ const Navigation = ({ navigation, isHome = false }: Props) => {
       <Salonized
         isVisible={isSalonizedOpen}
         setHidden={() => setIsSalonizedOpen(false)}
+      />
+      <SalonizedVoucher
+        isVisible={isSalonizedVoucherOpen}
+        setHidden={() => setIsSalonizedVoucherOpen(false)}
       />
       <nav>
         <styled.TopBar small={scroll.y > SMALL_TOP_BAR_AFTER_X_PX}>

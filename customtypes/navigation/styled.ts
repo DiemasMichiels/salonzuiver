@@ -180,7 +180,7 @@ export const MenuItems = styled.ul<{ isMenuOpen?: boolean }>`
     background-color: initial;
   }
 
-  * + *:not(:last-child) {
+  > * + * {
     position: relative;
 
     &::after {
@@ -198,11 +198,19 @@ export const MenuItems = styled.ul<{ isMenuOpen?: boolean }>`
         background-color: ${({ theme }) => theme.colors.brown72};
       }
     }
+
+    @media (min-width: 768px) {
+      &:last-child {
+        &::after {
+          display: none;
+        }
+      }
+    }
   }
 
   a {
     font-family: ${({ theme }) => theme.fonts.title};
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     line-height: 1.3em;
     font-weight: 600;
     color: ${({ theme }) => theme.colors.brown92};
@@ -226,27 +234,61 @@ export const MenuItems = styled.ul<{ isMenuOpen?: boolean }>`
     }
   }
 
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @media (min-width: 768px) {
+      flex-direction: initial;
+    }
+  }
+
   button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 8px 16px;
-    background-color: ${({ theme }) => theme.colors.green48p32};
 
     &:hover {
       background-color: rgba(155, 220, 24, 0.22);
     }
 
     @media (min-width: 768px) {
+      display: block;
+      background-color: ${({ theme }) => theme.colors.green48p32};
       padding: 16px 8px;
     }
 
+    svg {
+      margin-right: 8px;
+      transform: rotate(-90deg);
+
+      path {
+        fill: ${({ theme }) => theme.colors.green48};
+      }
+
+      @media (min-width: 768px) {
+        margin-right: 0;
+        transform: initial;
+
+        path {
+          fill: initial;
+        }
+      }
+    }
+
     p {
+      display: inline-block;
       font-family: ${({ theme }) => theme.fonts.title};
-      font-size: 3.2rem;
+      font-size: 2.4rem;
       line-height: 1.3em;
       font-weight: 600;
-      color: ${({ theme }) => theme.colors.brown92};
+      color: ${({ theme }) => theme.colors.green48};
       background: initial;
 
       @media (min-width: 768px) {
+        display: block;
         font-family: ${({ theme }) => theme.fonts.brand};
         padding: 0.4rem 0;
         font-size: 1.6rem;
