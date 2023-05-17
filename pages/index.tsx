@@ -62,7 +62,7 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
       navigation,
       footer,
     },
-    // revalidate: 600,
+    revalidate: 60,
   }
 }
 
