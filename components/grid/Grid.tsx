@@ -1,10 +1,10 @@
 import { Hours, Contact, Address } from '@slices'
 import { PRISMIC_SLICES } from '@utils/prismic/constants'
 import * as styled from './styled'
-import type SliceTypes from '@slices/sliceTypes'
+import type { DynamicPageDocumentDataSlicesSlice } from '@root/prismicio-types'
 
 type Props = {
-  slices: SliceTypes[]
+  slices: DynamicPageDocumentDataSlicesSlice[]
 }
 
 const Grid = ({ slices }: Props) => {

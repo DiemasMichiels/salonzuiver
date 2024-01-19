@@ -1,15 +1,7 @@
 /** @type {import('next').NextConfig} */
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const withPWA = require('next-pwa')
-
-module.exports = withPWA({
-  pwa: {
-    disable: process.env.NODE_ENV === 'development',
-    dest: 'public',
-    register: true,
-    skipWaiting: true,
-  },
+module.exports = {
+  compiler: { styledComponents: true },
   reactStrictMode: true,
   webpack(config) {
     config.module.rules.push({
@@ -21,6 +13,19 @@ module.exports = withPWA({
     return config
   },
   images: {
-    domains: ['images.prismic.io', 'images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.prismic.io',
+        port: '',
+        pathname: '/salonzuiver/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '**',
+      },
+    ],
   },
-})
+}

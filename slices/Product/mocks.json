@@ -1,0 +1,53 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default-slice",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading4",
+            "content": {
+              "text": "Command"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Sint sint ipsum dolor amet magna ea ex anim fugiat proident nulla. Adipisicing quis et officia quis adipisicing. Sit adipisicing sit ex."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "price",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "82",
+              "type": "Number"
+            }
+          ],
+          [
+            "time",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "95",
+              "type": "Number"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

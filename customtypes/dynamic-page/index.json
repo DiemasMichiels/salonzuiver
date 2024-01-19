@@ -3,6 +3,7 @@
   "label": "Dynamic Page",
   "repeatable": true,
   "status": true,
+  "format": "custom",
   "json": {
     "Main": {
       "uid": {

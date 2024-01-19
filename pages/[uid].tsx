@@ -1,23 +1,15 @@
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-import { PRISMIC_TYPES } from '@utils/prismic/constants'
 import createClient from '@utils/prismic/client'
 import { getStaticsForSlices } from '@utils/api/statics'
 import Slices from '@components/slices/Slices'
 import Page from '@components/page/Page'
-import type { NavigationData } from '@customtypes/navigation/types'
-import type { DynamicPageData } from '@customtypes/dynamic-page/types'
-import type { GetStaticProps, NextPage } from 'next'
-import type { Statics } from '@utils/api/statics'
-import type { FooterData } from '@customtypes/footer/types'
-import type { PrismicDocumentWithUID } from '@prismicio/types'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 
-type Props = {
-  doc: PrismicDocumentWithUID<DynamicPageData>
-  statics: Statics
-}
-
-const DynamicPage: NextPage<Props> = ({ doc, statics }) => {
+const DynamicPage = ({
+  doc,
+  statics,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter()
 
   useEffect(() => {
@@ -52,19 +44,9 @@ export const getStaticProps: GetStaticProps = async ({
 
   try {
     const client = createClient({ previewData })
-    doc = await client.getByUID<PrismicDocumentWithUID<DynamicPageData>>(
-      PRISMIC_TYPES.DYNAMIC_PAGE,
-      uid,
-      {},
-    )
-    navigation = await client.getSingle<PrismicDocumentWithUID<NavigationData>>(
-      PRISMIC_TYPES.NAVIGATION,
-      {},
-    )
-    footer = await client.getSingle<PrismicDocumentWithUID<FooterData>>(
-      PRISMIC_TYPES.FOOTER,
-      {},
-    )
+    doc = await client.getByUID('dynamic-page', uid, {})
+    navigation = await client.getSingle('navigation', {})
+    footer = await client.getSingle('footer', {})
 
     statics = await getStaticsForSlices(client, doc.data.slices)
   } catch (error) {}
@@ -84,8 +66,8 @@ export async function getStaticPaths() {
   let docs = undefined
 
   try {
-    const client = createClient()
-    docs = await client.getAllByType(PRISMIC_TYPES.DYNAMIC_PAGE)
+    const client = createClient({})
+    docs = await client.getAllByType('dynamic-page')
   } catch (error) {}
 
   return {

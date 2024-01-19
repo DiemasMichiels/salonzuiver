@@ -1,0 +1,36 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default-slice",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Whenever"
+            }
+          }
+        ]
+      },
+      "address": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Consectetur ea ex do id officia ipsum velit ex tempor voluptate est veniam nulla ut. Anim velit dolor velit magna cupidatat laborum fugiat nulla elit veniam occaecat cupidatat. Eiusmod anim labore aute et veniam consequat."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

@@ -2,25 +2,9 @@ import { PrismicRichText } from '@prismicio/react'
 import FancyImage from '@components/fancyImage/FancyImage'
 import { getActiveYears } from '@utils/replacers'
 import * as styled from './styled'
-import type { Slice, ImageField, RichTextField } from '@prismicio/types'
-import type { PRISMIC_SLICES } from '@utils/prismic/constants'
+import type { Content } from '@prismicio/client'
 
-export type InformationSlice = Slice<
-  PRISMIC_SLICES.INFORMATION,
-  {
-    title: RichTextField
-  },
-  {
-    subtitle: RichTextField
-    description: RichTextField
-    image: ImageField
-    imagePosition: 'right' | 'left'
-  }
->
-
-type Props = {
-  slice: InformationSlice
-}
+type Props = { slice: Content.InformationSlice }
 
 const Information = ({ slice }: Props) => (
   <styled.Section id='cta'>

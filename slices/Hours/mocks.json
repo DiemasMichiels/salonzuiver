@@ -1,0 +1,49 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default-slice",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Driver"
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "day",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "next",
+              "type": "Text"
+            }
+          ],
+          [
+            "hours",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "smile",
+              "type": "Text"
+            }
+          ],
+          [
+            "closed",
+            {
+              "__TYPE__": "BooleanContent",
+              "value": true
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -1,19 +1,8 @@
 import { PrismicRichText } from '@prismicio/react'
 import * as styled from './styled'
-import type { Slice, RichTextField } from '@prismicio/types'
-import type { PRISMIC_SLICES } from '@utils/prismic/constants'
+import type { Content } from '@prismicio/client'
 
-export type AddressSlice = Slice<
-  PRISMIC_SLICES.ADDRESS,
-  {
-    title: RichTextField
-    address: RichTextField
-  }
->
-
-type Props = {
-  slice: AddressSlice
-}
+type Props = { slice: Content.AddressSlice }
 
 const Address = ({ slice }: Props) => (
   <styled.AddressSection data-aos='fade-up'>

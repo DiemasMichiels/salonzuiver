@@ -1,13 +1,18 @@
 import { HOMEPAGE_UID, PRISMIC_TYPES } from './constants'
-import type { FilledLinkToDocumentField } from '@prismicio/types'
+import type { FilledContentRelationshipField } from '@prismicio/client'
 
-export const linkResolver = (doc: FilledLinkToDocumentField) => {
-  if (doc.isBroken) {
+export const linkResolver = (
+  linkToDocumentField: FilledContentRelationshipField,
+) => {
+  if (linkToDocumentField.isBroken) {
     return '/404'
   }
 
-  if (doc.type === PRISMIC_TYPES.DYNAMIC_PAGE && doc.uid !== HOMEPAGE_UID) {
-    return `/${doc.uid}`
+  if (
+    linkToDocumentField.type === PRISMIC_TYPES.DYNAMIC_PAGE &&
+    linkToDocumentField.uid !== HOMEPAGE_UID
+  ) {
+    return `/${linkToDocumentField.uid}`
   }
 
   return '/'

@@ -5,29 +5,11 @@ import Button from '@components/general/button/Button'
 import FancyImage from '@components/fancyImage/FancyImage'
 import DownCircleIcon from '@assets/icons/downCircle.svg'
 import * as styled from './styled'
-import type { PRISMIC_SLICES } from '@utils/prismic/constants'
-import type {
-  ImageField,
-  KeyTextField,
-  RichTextField,
-  Slice,
-} from '@prismicio/types'
+import type { Content } from '@prismicio/client'
 
 const MOBILE_MENU_MAX_WIDTH = 768
 
-export type HeroSlice = Slice<
-  PRISMIC_SLICES.HERO,
-  {
-    title: RichTextField
-    description: RichTextField
-    image: ImageField
-    cta: KeyTextField
-  }
->
-
-type Props = {
-  slice: HeroSlice
-}
+type Props = { slice: Content.HeroSlice }
 
 const Hero = ({ slice }: Props) => {
   const { title, description, image, cta } = slice.primary
