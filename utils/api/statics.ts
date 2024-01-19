@@ -19,7 +19,9 @@ const getPrices = async (
   ) as SliceZone<PricesSlice>
 
   if (priceSlices.length) {
-    const productIds = priceSlices.reduce<string[]>((acc, slice) => {
+    // @ts-ignore
+    const productIds = priceSlices.reduce<string[]>((acc: string[], slice) => {
+      // @ts-ignore
       const ids = slice.items.map((productGroup) =>
         isFilled.contentRelationship(productGroup.products)
           ? productGroup.products.id

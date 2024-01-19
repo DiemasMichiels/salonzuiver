@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 
 module.exports = {
+  compiler: { styledComponents: true },
   reactStrictMode: true,
   webpack(config) {
     config.module.rules.push({
@@ -12,6 +13,19 @@ module.exports = {
     return config
   },
   images: {
-    domains: ['images.prismic.io', 'images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.prismic.io',
+        port: '',
+        pathname: '/salonzuiver/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        port: '',
+        pathname: '**',
+      },
+    ],
   },
 }

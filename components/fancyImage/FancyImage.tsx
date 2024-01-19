@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import * as styled from './styled'
 import type { ImageField } from '@prismicio/types'
 

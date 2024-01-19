@@ -1,5 +1,5 @@
 {
-  "apiEndpoint": "https://salonzuiver.prismic.io/api/v2",
+  "apiEndpoint": "https://salonzuiver.cdn.prismic.io/api/v2",
   "repositoryName": "salonzuiver",
   "adapter": "@slicemachine/adapter-next",
   "libraries": ["./slices"],

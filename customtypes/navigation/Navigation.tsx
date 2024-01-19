@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 import { useWindowScroll, useViewportSize, useScrollLock } from '@mantine/hooks'
 import { useState } from 'react'
 import Link from '@components/general/Link/Link'
