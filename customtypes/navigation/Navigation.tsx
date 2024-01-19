@@ -8,14 +8,13 @@ import CloseIcon from '@assets/icons/close.svg'
 import GiftIcon from '@assets/icons/gift.svg'
 import Salonized, { SalonizedVoucher } from '@components/salonized/Salonized'
 import * as styled from './styled'
-import type { NavigationData } from '@customtypes/navigation/types'
-import type { PrismicDocumentWithUID } from '@prismicio/types'
+import type { NavigationDocument } from '@root/prismicio-types'
 
 const SMALL_TOP_BAR_AFTER_X_PX = 60
 const MOBILE_MENU_MAX_WIDTH = 768
 
 type Props = {
-  navigation: PrismicDocumentWithUID<NavigationData>
+  navigation: NavigationDocument
   isHome?: boolean
 }
 

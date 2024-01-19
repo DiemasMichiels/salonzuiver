@@ -1,22 +1,8 @@
 import { PrismicRichText } from '@prismicio/react'
 import * as styled from './styled'
-import type { Slice, RichTextField } from '@prismicio/types'
-import type { PRISMIC_SLICES } from '@utils/prismic/constants'
+import type { Content } from '@prismicio/client'
 
-export type TermsSlice = Slice<
-  PRISMIC_SLICES.TERMS,
-  {
-    title: RichTextField
-  },
-  {
-    subtitle: RichTextField
-    description: RichTextField
-  }
->
-
-type Props = {
-  slice: TermsSlice
-}
+type Props = { slice: Content.TermsSlice }
 
 const Terms = ({ slice }: Props) => (
   <styled.Section id='cta' data-aos='fade-up'>

@@ -1,17 +1,11 @@
-import {
-  SliceSimulator,
-  SliceSimulatorProps,
-} from '@prismicio/slice-simulator-react'
-import state from '@slicemachine/libraries-state.json'
-import Slices from '@components/slices/Slices'
-import type SliceTypes from '@slices/sliceTypes'
+import { SliceSimulator } from '@slicemachine/adapter-next/simulator'
+import { SliceZone } from '@prismicio/react'
+import * as components from '@slices'
 
 const SliceSimulatorPage = () => (
   <SliceSimulator
-    sliceZone={({ slices }) => (
-      <Slices slices={slices as unknown as SliceTypes[]} />
-    )}
-    state={state as unknown as SliceSimulatorProps['state']}
+    background='black'
+    sliceZone={(props) => <SliceZone {...props} components={components} />}
   />
 )
 

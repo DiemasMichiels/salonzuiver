@@ -36,17 +36,16 @@ const Link = ({ href, children, target, onClick, className }: Props) => {
   }
 
   return (
-    <NextLink href={actualHref}>
-      <a
-        onClick={onClick}
-        className={`${router.asPath === actualHref ? 'active' : ''} ${
-          className ?? ''
-        }`}
-        target={actualTarget}
-        rel={actualTarget === '_blank' ? 'noreferrer noopener' : undefined}
-      >
-        {children}
-      </a>
+    <NextLink
+      href={actualHref}
+      onClick={onClick}
+      className={`${router.asPath === actualHref ? 'active' : ''} ${
+        className ?? ''
+      }`}
+      target={actualTarget}
+      rel={actualTarget === '_blank' ? 'noreferrer noopener' : undefined}
+    >
+      {children}
     </NextLink>
   )
 }

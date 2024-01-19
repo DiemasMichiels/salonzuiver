@@ -1,19 +1,9 @@
 import { PrismicRichText } from '@prismicio/react'
 import InfoIcon from '@assets/icons/info.svg'
 import * as styled from './styled'
-import type { PRISMIC_SLICES } from '@utils/prismic/constants'
-import type { Slice, RichTextField } from '@prismicio/types'
+import type { Content } from '@prismicio/client'
 
-export type NoticeSlice = Slice<
-  PRISMIC_SLICES.NOTICE,
-  {
-    text: RichTextField
-  }
->
-
-type Props = {
-  slice: NoticeSlice
-}
+type Props = { slice: Content.NoticeSlice }
 
 const Notice = ({ slice }: Props) => (
   <styled.NoticeSection data-aos='fade-up'>

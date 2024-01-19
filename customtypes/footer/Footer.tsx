@@ -1,11 +1,10 @@
 import { PrismicRichText } from '@prismicio/react'
 import Link from '@components/general/Link/Link'
 import * as styled from './styled'
-import type { PrismicDocumentWithUID } from '@prismicio/types'
-import type { FooterData } from './types'
+import type { FooterDocument } from '@root/prismicio-types'
 
 type Props = {
-  footer: PrismicDocumentWithUID<FooterData>
+  footer: FooterDocument
 }
 
 const Footer = ({ footer }: Props) => {

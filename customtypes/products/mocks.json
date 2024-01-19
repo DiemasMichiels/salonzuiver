@@ -1,0 +1,86 @@
+[
+  {
+    "groupTitle": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "heading3",
+          "content": {
+            "text": "Slide"
+          }
+        }
+      ]
+    },
+    "notice": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Cillum irure do minim. Tempor esse consectetur labore consequat sunt minim commodo amet culpa reprehenderit magna non."
+          }
+        }
+      ]
+    },
+    "slices": {
+      "__TYPE__": "SliceContentType",
+      "value": [
+        {
+          "key": "product$eb55edc0-6a38-4b03-96fb-cb7a6e36f839",
+          "name": "product",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default-slice",
+            "primary": {
+              "title": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "heading4",
+                    "content": {
+                      "text": "Weigh"
+                    }
+                  }
+                ]
+              },
+              "description": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Consequat esse id eu sunt incididunt anim eu. Sunt ullamco pariatur enim."
+                    }
+                  }
+                ]
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": [
+                  [
+                    "price",
+                    {
+                      "__TYPE__": "FieldContent",
+                      "value": "71",
+                      "type": "Number"
+                    }
+                  ],
+                  [
+                    "time",
+                    {
+                      "__TYPE__": "FieldContent",
+                      "value": "43",
+                      "type": "Number"
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

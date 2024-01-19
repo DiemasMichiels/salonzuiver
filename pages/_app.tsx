@@ -2,11 +2,11 @@ import { ThemeProvider } from 'styled-components'
 import { DefaultSeo, NextSeo } from 'next-seo'
 import { RouterScrollProvider } from '@moxy/next-router-scroll'
 import Head from 'next/head'
-import { PrismicPreview } from '@prismicio/next'
 import { PrismicProvider } from '@prismicio/react'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import Script from 'next/script'
+import { PrismicPreview } from '@prismicio/next'
 import PageTransition from '@components/pageTransition/PageTransition'
 import SEO from '@root/next-seo.config'
 import THEME from '@theme/theme'
@@ -18,18 +18,19 @@ import { getActiveYears } from '@utils/replacers'
 import { repositoryName } from '@utils/prismic/client'
 import { linkResolver } from '@utils/prismic/routes'
 import Link from '@components/general/Link/Link'
-import type { PrismicDocumentWithUID } from '@prismicio/types'
-import type { DynamicPageData } from '@customtypes/dynamic-page/types'
 import type { AppProps } from 'next/app'
-import type { NavigationData } from '@customtypes/navigation/types'
-import type { FooterData } from '@customtypes/footer/types'
+import type {
+  DynamicPageDocument,
+  FooterDocument,
+  NavigationDocument,
+} from '@root/prismicio-types'
 
 import 'aos/dist/aos.css'
 
 type PageProps = {
-  doc: PrismicDocumentWithUID<DynamicPageData>
-  navigation: PrismicDocumentWithUID<NavigationData>
-  footer: PrismicDocumentWithUID<FooterData>
+  doc: DynamicPageDocument
+  navigation: NavigationDocument
+  footer: FooterDocument
 }
 
 const App = ({
@@ -47,6 +48,16 @@ const App = ({
       once: true,
       easing: 'ease-out',
     })
+  }, [])
+
+  useEffect(() => {
+    try {
+      navigator.serviceWorker.getRegistrations().then(function (registrations) {
+        for (const registration of registrations) {
+          registration.unregister()
+        }
+      })
+    } catch {}
   }, [])
 
   return (
@@ -87,24 +98,23 @@ const App = ({
           </Link>
         )}
       >
-        <PrismicPreview repositoryName={repositoryName}>
-          <RouterScrollProvider>
-            <ThemeProvider theme={THEME}>
-              <GlobalStyle />
-              {pageProps.navigation && (
-                <Navigation
-                  isHome={router.pathname === '/'}
-                  navigation={pageProps.navigation}
-                />
-              )}
-              <PageTransition>
-                <styled.Background data-aos='fade' />
-                <Component {...pageProps} />
-                <Footer footer={pageProps.footer} />
-              </PageTransition>
-            </ThemeProvider>
-          </RouterScrollProvider>
-        </PrismicPreview>
+        <PrismicPreview repositoryName={repositoryName} />
+        <RouterScrollProvider>
+          <ThemeProvider theme={THEME}>
+            <GlobalStyle />
+            {pageProps.navigation && (
+              <Navigation
+                isHome={router.pathname === '/'}
+                navigation={pageProps.navigation}
+              />
+            )}
+            <PageTransition>
+              <styled.Background data-aos='fade' />
+              <Component {...pageProps} />
+              <Footer footer={pageProps.footer} />
+            </PageTransition>
+          </ThemeProvider>
+        </RouterScrollProvider>
       </PrismicProvider>
     </>
   )

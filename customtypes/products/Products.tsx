@@ -2,11 +2,10 @@ import { PrismicRichText } from '@prismicio/react'
 import Slices from '@components/slices/Slices'
 import Notice from '@components/notice/Notice'
 import * as styled from './styled'
-import type { ProductsData } from './types'
-import type { PrismicDocumentWithUID } from '@prismicio/types'
+import type { ProductsDocument } from '@root/prismicio-types'
 
 type Props = {
-  doc: PrismicDocumentWithUID<ProductsData>
+  doc: ProductsDocument
 }
 
 const Products = ({ doc }: Props) => {

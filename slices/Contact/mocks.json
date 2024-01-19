@@ -1,0 +1,42 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default-slice",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading2",
+            "content": {
+              "text": "Condition"
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "icon",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "mail",
+              "type": "Select"
+            }
+          ],
+          [
+            "text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "silly",
+              "type": "Text"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

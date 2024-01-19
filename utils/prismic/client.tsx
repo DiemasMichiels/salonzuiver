@@ -1,22 +1,20 @@
 import * as prismic from '@prismicio/client'
 import { enableAutoPreviews } from '@prismicio/next'
-import sm from '@root/sm.json'
-import type {
-  ClientConfig as PrismicClientConfig,
-  HttpRequestLike,
-} from '@prismicio/client'
+import sm from '@root/slicemachine.config.json'
+import type { ClientConfig as PrismicClientConfig } from '@prismicio/client'
 import type { PreviewData } from 'next'
+import type { NextApiRequestLike } from '@prismicio/next/dist/types'
 
 export const endpoint = sm.apiEndpoint
 export const repositoryName = prismic.getRepositoryName(endpoint)
 
 type ClientConfig = PrismicClientConfig & {
   previewData?: PreviewData
-  req?: HttpRequestLike
+  req?: NextApiRequestLike
 }
 
 // Prismic client
-export const createClient = (config: ClientConfig = {}) => {
+export const createClient = (config: ClientConfig) => {
   const client = prismic.createClient(endpoint, { ...config })
 
   enableAutoPreviews({

@@ -1,24 +1,9 @@
 import { PrismicRichText } from '@prismicio/react'
 import PriceTime from '@components/priceTime/PriceTime'
 import * as styled from './styled'
-import type { PRISMIC_SLICES } from '@utils/prismic/constants'
-import type { Slice, RichTextField, KeyTextField } from '@prismicio/types'
+import type { Content } from '@prismicio/client'
 
-export type ProductSlice = Slice<
-  PRISMIC_SLICES.PRODUCT,
-  {
-    title: RichTextField
-    description: RichTextField
-  },
-  {
-    price: KeyTextField
-    time: KeyTextField
-  }
->
-
-type Props = {
-  slice: ProductSlice
-}
+type Props = { slice: Content.ProductSlice }
 
 const Product = ({ slice }: Props) => (
   <styled.Product>
@@ -26,7 +11,7 @@ const Product = ({ slice }: Props) => (
       <PrismicRichText field={slice.primary.title} />
       <styled.PriceList>
         {slice.items.map((item, i) => (
-          <PriceTime key={i} {...item} />
+          <PriceTime key={i} price={item.price} time={item.time} />
         ))}
       </styled.PriceList>
     </styled.Title>

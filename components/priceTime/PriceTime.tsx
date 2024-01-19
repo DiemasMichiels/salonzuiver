@@ -1,9 +1,9 @@
 import * as styled from './styled'
-import type { KeyTextField } from '@prismicio/types'
+import type { NumberField } from '@prismicio/client'
 
 type Props = {
-  price: KeyTextField
-  time: KeyTextField
+  price: NumberField
+  time: NumberField
 }
 
 const PriceTime = ({ price, time }: Props) => {

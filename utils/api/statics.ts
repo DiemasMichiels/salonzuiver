@@ -1,38 +1,42 @@
+import { isFilled, type Client, type SliceZone } from '@prismicio/client'
 import { PRISMIC_SLICES } from '@utils/prismic/constants'
-import type { PricesSlice } from '@slices/Prices'
-import type { ProductsData } from '@customtypes/products/types'
-import type SliceTypes from '@slices/sliceTypes'
-import type { PrismicDocumentWithUID } from '@prismicio/types'
-import type { Client } from '@prismicio/client'
+import type {
+  DynamicPageDocumentDataSlicesSlice,
+  PricesSlice,
+  ProductsDocument,
+} from '@root/prismicio-types'
 
 export type Statics = {
-  products: Record<string, PrismicDocumentWithUID<ProductsData>> | null
+  products: { [key: string]: ProductsDocument } | null | undefined
 }
 
-const getPrices = async (client: Client, slices: SliceTypes[]) => {
+const getPrices = async (
+  client: Client,
+  slices: SliceZone<DynamicPageDocumentDataSlicesSlice>,
+) => {
   const priceSlices = slices.filter(
     (slice) => slice.slice_type === PRISMIC_SLICES.PRICES,
-  ) as PricesSlice[]
+  ) as SliceZone<PricesSlice>
 
   if (priceSlices.length) {
     const productIds = priceSlices.reduce<string[]>((acc, slice) => {
-      const ids = slice.items.map((productGroup) => productGroup.products.id)
-      return [...acc, ...ids]
+      const ids = slice.items.map((productGroup) =>
+        isFilled.contentRelationship(productGroup.products)
+          ? productGroup.products.id
+          : null,
+      )
+      return [...acc, ...ids].filter((id) => id) as string[]
     }, [])
 
-    const productResult = await client.getByIDs<
-      PrismicDocumentWithUID<ProductsData>
-    >(productIds, {
+    const productResult = await client.getByIDs<ProductsDocument>(productIds, {
       pageSize: 100,
     })
 
     if (productResult.results.length) {
-      return productResult.results.reduce<
-        Record<string, PrismicDocumentWithUID<ProductsData>>
-      >((acc, item) => {
+      return productResult.results.reduce((acc, item) => {
         acc[item.id] = item
         return { ...acc }
-      }, {})
+      }, {} as { [key: string]: ProductsDocument })
     }
 
     return null
@@ -41,9 +45,9 @@ const getPrices = async (client: Client, slices: SliceTypes[]) => {
 
 export const getStaticsForSlices = async (
   client: Client,
-  slices: SliceTypes[],
+  slices: SliceZone<DynamicPageDocumentDataSlicesSlice>,
 ): Promise<Statics> => {
   const products = await getPrices(client, slices)
 
-  return { products: products ?? null }
+  return { products: products || null }
 }

@@ -1,30 +1,10 @@
-import { PrismicRichText } from '@prismicio/react'
+import { PrismicRichText, SliceComponentProps } from '@prismicio/react'
 import * as styled from './styled'
-import type { PRISMIC_SLICES } from '@utils/prismic/constants'
-import type {
-  Slice,
-  RichTextField,
-  BooleanField,
-  KeyTextField,
-} from '@prismicio/types'
+import type { Content } from '@prismicio/client'
 
-export type HoursSlice = Slice<
-  PRISMIC_SLICES.HOURS,
-  {
-    title: RichTextField
-  },
-  {
-    day: KeyTextField
-    hours: KeyTextField
-    closed: BooleanField
-  }
->
+export type HoursSlice = SliceComponentProps<Content.HoursSlice>
 
-type Props = {
-  slice: HoursSlice
-}
-
-const Hours = ({ slice }: Props) => (
+const Hours = ({ slice }: HoursSlice) => (
   <styled.HoursSection data-aos='fade-up'>
     <PrismicRichText field={slice.primary.title} />
     <styled.Table>

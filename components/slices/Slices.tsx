@@ -1,16 +1,20 @@
 import { Hero, Prices, Product, Notice, Information, Terms } from '@slices'
 import { PRISMIC_SLICES } from '@utils/prismic/constants'
 import Grid from '@components/grid/Grid'
-import type SliceTypes from '@slices/sliceTypes'
 import type { Statics } from '@utils/api/statics'
+import type {
+  DynamicPageDocumentDataSlicesSlice,
+  ProductSlice,
+} from '@root/prismicio-types'
+import type { SliceZone } from '@prismicio/client'
 
 type Props = {
-  slices: SliceTypes[]
+  slices: SliceZone<DynamicPageDocumentDataSlicesSlice | ProductSlice>
   statics?: Statics
 }
 
 const Slices = ({ slices, statics }: Props) => {
-  const gridSlices: SliceTypes[] = []
+  const gridSlices: DynamicPageDocumentDataSlicesSlice[] = []
 
   const slicesMap = slices.map((slice, i) => {
     switch (slice.slice_type) {

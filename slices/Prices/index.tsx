@@ -1,29 +1,17 @@
 import { PrismicRichText } from '@prismicio/react'
+import { isFilled, type Content } from '@prismicio/client'
 import Products from '@customtypes/products/Products'
 import * as styled from './styled'
-import type { PRISMIC_SLICES } from '@utils/prismic/constants'
-import type {
-  Slice,
-  RichTextField,
-  SelectField,
-  FilledLinkToDocumentField,
-} from '@prismicio/types'
-import type { Statics } from '@utils/api/statics'
-
-export type PricesSlice = Slice<
-  PRISMIC_SLICES.PRICES,
-  {
-    title: RichTextField
-  },
-  {
-    products: FilledLinkToDocumentField
-    position: SelectField<'left' | 'right'>
-  }
->
+import type { ProductsDocument } from '@root/prismicio-types'
 
 type Props = {
-  slice: PricesSlice
-  products: Statics['products']
+  slice: Content.PricesSlice
+  products:
+    | {
+        [key: string]: ProductsDocument
+      }
+    | null
+    | undefined
 }
 
 const Prices = ({ slice, products }: Props) => {
@@ -35,7 +23,8 @@ const Prices = ({ slice, products }: Props) => {
           {products &&
             slice.items.map(
               (item) =>
-                item.position === 'left' && (
+                item.position === 'left' &&
+                isFilled.contentRelationship(item.products) && (
                   <Products
                     key={item.products.id}
                     doc={products[item.products.id]}
@@ -47,7 +36,8 @@ const Prices = ({ slice, products }: Props) => {
           {products &&
             slice.items.map(
               (item) =>
-                item.position === 'right' && (
+                item.position === 'right' &&
+                isFilled.contentRelationship(item.products) && (
                   <Products
                     key={item.products.id}
                     doc={products[item.products.id]}

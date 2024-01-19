@@ -1,20 +1,12 @@
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-import { HOMEPAGE_UID, PRISMIC_TYPES } from '@utils/prismic/constants'
+import { HOMEPAGE_UID } from '@utils/prismic/constants'
 import createClient from '@utils/prismic/client'
 import Slices from '@components/slices/Slices'
 import Page from '@components/page/Page'
-import type { NavigationData } from '@customtypes/navigation/types'
-import type { GetStaticProps, NextPage } from 'next'
-import type { DynamicPageData } from '@customtypes/dynamic-page/types'
-import type { FooterData } from '@customtypes/footer/types'
-import type { PrismicDocumentWithUID } from '@prismicio/types'
+import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 
-type Props = {
-  doc: PrismicDocumentWithUID<DynamicPageData>
-}
-
-const Home: NextPage<Props> = ({ doc }) => {
+const Home = ({ doc }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const router = useRouter()
 
   useEffect(() => {
@@ -41,19 +33,9 @@ export const getStaticProps: GetStaticProps = async ({ previewData }) => {
 
   try {
     const client = createClient({ previewData })
-    doc = await client.getByUID<PrismicDocumentWithUID<DynamicPageData>>(
-      PRISMIC_TYPES.DYNAMIC_PAGE,
-      HOMEPAGE_UID,
-      {},
-    )
-    navigation = await client.getSingle<PrismicDocumentWithUID<NavigationData>>(
-      PRISMIC_TYPES.NAVIGATION,
-      {},
-    )
-    footer = await client.getSingle<PrismicDocumentWithUID<FooterData>>(
-      PRISMIC_TYPES.FOOTER,
-      {},
-    )
+    doc = await client.getByUID('dynamic-page', HOMEPAGE_UID, {})
+    navigation = await client.getSingle('navigation', {})
+    footer = await client.getSingle('footer', {})
   } catch (error) {}
 
   return {
