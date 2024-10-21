@@ -1,6 +1,10 @@
+import { ReactNode } from 'react'
 import styled from 'styled-components'
 
-export const ImageContainer = styled.div<{ small: boolean }>`
+export const ImageContainer = styled.div<{
+  small: boolean
+  children: ReactNode
+}>`
   width: 100%;
   height: 100%;
 

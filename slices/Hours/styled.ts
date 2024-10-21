@@ -1,6 +1,7 @@
+import { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 
-export const HoursSection = styled.section`
+export const HoursSection = styled.section<{ children: ReactNode }>`
   width: 100%;
   flex-grow: 1;
 
@@ -26,7 +27,7 @@ export const Table = styled.table`
   }
 `
 
-export const TableRow = styled.tr<{ closed?: boolean }>`
+export const TableRow = styled.tr<{ closed?: boolean; children: ReactNode }>`
   th,
   td {
     width: 50%;

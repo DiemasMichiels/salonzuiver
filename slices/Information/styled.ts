@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import { ReactNode } from 'react'
 import { ContainerStyle } from '@components/general/styled'
 
-export const Section = styled.section`
+export const Section = styled.section<{ children: ReactNode; id: string }>`
   ${ContainerStyle}
 
   h2 {
@@ -13,6 +14,7 @@ export const Section = styled.section`
 
 export const InfoBlock = styled.div<{
   imagePosition: 'right' | 'left'
+  children: ReactNode
 }>`
   display: flex;
   flex-direction: column-reverse;
@@ -49,10 +51,8 @@ export const ImageContainer = styled.div`
   height: 300px;
 
   @media not all and (min-resolution: 0.001dpcm) {
-    @media {
-      margin-top: -60px;
-      margin-bottom: 60px;
-    }
+    margin-top: -60px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: 992px) {

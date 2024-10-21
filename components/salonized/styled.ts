@@ -1,6 +1,10 @@
+import { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 
-export const Salonized = styled.div<{ isVisible?: boolean }>`
+export const Salonized = styled.div<{
+  isVisible?: boolean
+  children: ReactNode
+}>`
   z-index: 99;
   position: fixed;
   display: block;

@@ -1,6 +1,7 @@
+import { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 
-export const Page = styled.div<{ isFirstBig?: boolean }>`
+export const Page = styled.div<{ isFirstBig?: boolean; children: ReactNode }>`
   ${({ theme, isFirstBig }) =>
     !isFirstBig &&
     css`

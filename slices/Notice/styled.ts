@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import { ReactNode } from 'react'
 import { ContainerStyle } from '@components/general/styled'
 
-export const NoticeSection = styled.section`
+export const NoticeSection = styled.section<{ children: ReactNode }>`
   flex: 1;
   display: flex;
   align-items: flex-end;

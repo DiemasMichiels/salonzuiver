@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
+import { ReactNode } from 'react'
 import { LinkHoverStyleLR, LinkHoverStyleTB } from '@components/general/styled'
 
-export const TopBar = styled.div<{ small?: boolean }>`
+export const TopBar = styled.div<{ small?: boolean; children: ReactNode }>`
   z-index: 7;
   position: fixed;
   display: flex;
@@ -53,6 +54,7 @@ export const SideBar = styled.div<{
   isMenuOpen?: boolean
   isHome?: boolean
   bottomPaddingMobile: number
+  children: ReactNode
 }>`
   z-index: 8;
   position: fixed;
@@ -93,7 +95,10 @@ export const SideBar = styled.div<{
   }
 `
 
-export const SocialItems = styled.ul<{ isMenuOpen?: boolean }>`
+export const SocialItems = styled.ul<{
+  isMenuOpen?: boolean
+  children: ReactNode
+}>`
   display: flex;
   gap: 20px;
   margin: 0;
@@ -127,7 +132,10 @@ export const SocialItems = styled.ul<{ isMenuOpen?: boolean }>`
   }
 `
 
-export const MenuButton = styled.button`
+export const MenuButton = styled.button<{
+  children: ReactNode
+  onClick: () => void
+}>`
   display: flex;
   justify-content: center;
   width: 35px;
@@ -147,7 +155,10 @@ export const MenuButton = styled.button`
   }
 `
 
-export const MenuItems = styled.ul<{ isMenuOpen?: boolean }>`
+export const MenuItems = styled.ul<{
+  isMenuOpen?: boolean
+  children: ReactNode
+}>`
   z-index: 7;
   position: fixed;
   display: flex;

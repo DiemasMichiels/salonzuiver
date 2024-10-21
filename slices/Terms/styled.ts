@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import { ReactNode } from 'react'
 import { ContainerStyle } from '@components/general/styled'
 
-export const Section = styled.section`
+export const Section = styled.section<{ children: ReactNode; id: string }>`
   ${ContainerStyle}
 
   @media (min-width: 1200px) {

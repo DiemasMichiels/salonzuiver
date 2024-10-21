@@ -1,7 +1,12 @@
 import styled from 'styled-components'
+import { ReactNode } from 'react'
 import { LinkHoverStyleLR, LinkHoverStyleRL } from '../styled'
 
-export const Button = styled.button`
+export const Button = styled.button<{
+  children: ReactNode
+  className?: string
+  onClick: () => void
+}>`
   position: relative;
   display: flex;
   align-items: center;
