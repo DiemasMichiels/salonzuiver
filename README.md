@@ -9,7 +9,7 @@ Copy `.env.sample` to `.env` and fill in the required variables
 First, run the development server:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 To run slicemachine server:
 
 ```bash
-yarn sm
+npm run sm
 ```
 
 Open [http://localhost:9999](http://localhost:9999) to see the slicemachine interface.
